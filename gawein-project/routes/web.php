@@ -17,4 +17,4 @@
 
 Route::view('/{path?}', 'welcome');
 
-Route::view('/{path?}', 'index');
+
