@@ -6,16 +6,18 @@ import {
     Route
 } from "react-router-dom";
 import Landingpage from "./landingpage/Landingpage";
-import Loginpage from "./landingpage/Loginpage";
+import Login from "./landingpage/Login";
 import Regispage from "./landingpage/Regispage";
-
+import Navbar from "./landingpage/Navbar";
+import Profile from "./landingpage/Profile";
 function App() {
     return (
         <Router>
             <Switch>
                 <Route exact path="/" component={Landingpage} />
-                <Route path="/login" component={Loginpage} />
+                <Route path="/login" component={Login} />
                 <Route path="/register" component={Regispage} />
+                <Route path="/profile" component={Profile} />
             </Switch>
         </Router>
     );

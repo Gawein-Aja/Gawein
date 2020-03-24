@@ -1,31 +1,116 @@
-import React, {Component} from 'react';
-import Nav2 from "./Nav2";
+import React, { Component } from 'react'
+import { register } from './UserFunctions'
 
-class Regispage extends Component {
-    render() {
+class Registerpage extends Component {
+    constructor() {
+        super()
+        this.state = {
+            first_name: '',
+            last_name: '',
+            email: '',
+            password: '',
+            password_confirmation: '',
+            errors: {}
+        }
+
+        this.onChange = this.onChange.bind(this)
+        this.onSubmit = this.onSubmit.bind(this)
+    }
+
+    onChange (e) {
+        this.setState({ [e.target.name]: e.target.value })
+    }
+    onSubmit (e) {
+        e.preventDefault()
+
+        const newUser = {
+            name: this.state.first_name + ' ' + this.state.last_name,
+            email: this.state.email,
+            password: this.state.password,
+            password_confirmation: this.state.password_confirmation,
+        }
+
+        register(newUser).then(res => {
+            this.props.history.push(`/login`)
+        })
+    }
+
+    render () {
         return (
-            <div>
-                <Nav2 />
-                <div className="wrapper fadeInDown">
-                    <div className="formContent">
-                        <div className="fadeIn first">
-                            <h1 className="icon">Register</h1>
-                        </div>
-
-                        <form>
-                            <input type="text" className="fadeIn second" name="nama" placeholder="Nama Lengkap"/>
-                            <input type="text" className="fadeIn third" name="noinduk" placeholder="NIM"/>
-                            <input type="text" className="fadeIn second" name="email" placeholder="Email"/>
-                            <input type="text" className="fadeIn third" name="nohp" placeholder="No Handphone"/>
-                            <input type="text" className="fadeIn second" name="password" placeholder="Password"/>
-                            <input type="text" className="fadeIn third" name="konfpassword" placeholder="Konfirmasi Password"/>
-                            <button type="submit" className="btn fadeIn fourth" value="Submit">Register Now</button>
+            <div className="container">
+                <div className="row">
+                    <div className="col-md-6 mt-5 mx-auto">
+                        <form noValidate onSubmit={this.onSubmit}>
+                            <h1 className="h3 mb-3 font-weight-normal">
+                                Register
+                            </h1>
+                            <div className="form-group">
+                                <label htmlFor="name">First name</label>
+                                <input
+                                    type="text"
+                                    className="form-control"
+                                    name="first_name"
+                                    placeholder="Enter your first name"
+                                    value={this.state.first_name}
+                                    onChange={this.onChange}
+                                />
+                            </div>
+                            <div className="form-group">
+                                <label htmlFor="name">Last name</label>
+                                <input
+                                    type="text"
+                                    className="form-control"
+                                    name="last_name"
+                                    placeholder="Enter your lastname name"
+                                    value={this.state.last_name}
+                                    onChange={this.onChange}
+                                />
+                            </div>
+                            <div className="form-group">
+                                <label htmlFor="email">Email address</label>
+                                <input
+                                    type="email"
+                                    className="form-control"
+                                    name="email"
+                                    placeholder="Enter email"
+                                    value={this.state.email}
+                                    onChange={this.onChange}
+                                />
+                            </div>
+                            <div className="form-group">
+                                <label htmlFor="password">Password</label>
+                                <input
+                                    type="password"
+                                    className="form-control"
+                                    name="password"
+                                    placeholder="Password"
+                                    value={this.state.password}
+                                    onChange={this.onChange}
+                                />
+                            </div>
+                            <div className="form-group">
+                                <label htmlFor="password_confirmations">PasswordConfirm</label>
+                                <input
+                                    type="password"
+                                    className="form-control"
+                                    name="password_confirmation"
+                                    placeholder="Password_confirmation"
+                                    value={this.state.password_confirmation}
+                                    onChange={this.onChange}
+                                />
+                            </div>
+                            <button
+                                type="submit"
+                                className="btn btn-lg btn-primary btn-block"
+                            >
+                                Register!
+                            </button>
                         </form>
                     </div>
                 </div>
             </div>
-        );
+        )
     }
 }
 
-export default Regispage;
+export default Registerpage

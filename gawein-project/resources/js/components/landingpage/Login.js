@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import Nav2 from "./Nav2";
 import { login } from './UserFunctions'
 
-class Loginpage extends Component {
+class Login extends Component {
     constructor() {
         super()
         this.state = {
@@ -64,11 +64,7 @@ class Loginpage extends Component {
                                     onChange={this.onChange}
                                 />
                             </div>
-                            <button
-                                type="submit"
-                                className="btn btn-lg btn-primary btn-block"
-                            >
-                                Sign in
+                            <button type="submit" className="btn btn-lg btn-primary btn-block"> Sign in
                             </button>
                         </form>
                     </div>
@@ -78,4 +74,4 @@ class Loginpage extends Component {
     }
 }
 
-export default Loginpage
+export default Login

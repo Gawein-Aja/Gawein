@@ -14,4 +14,4 @@ require('./bootstrap');
 
 require('./components/App');
 
-require('./Index');
+/*require('./Index');*/

@@ -3,8 +3,7 @@ import axios from 'axios'
 export const register = newUser => {
     return axios
         .post('api/auth/signup', newUser, {
-          headers: { 'Content-Type': 'application/json' },
-          headers: { 'X-Requested-With': 'XMLHttpRequest' }
+          headers: { 'Content-Type': 'application/json', 'X-Requested-With': 'XMLHttpRequest' }
         })
         .then(response => {
             console.log(response)
@@ -23,14 +22,13 @@ export const login = user => {
                 password: user.password
             },
             {
-                headers: { 'Content-Type': 'application/json' },
-                headers: { 'X-Requested-With': 'XMLHttpRequest' }
-
+                headers: { 'Content-Type': 'application/json' ,'X-Requested-With': 'XMLHttpRequest'}
             }
         )
         .then(response => {
-            localStorage.setItem('usertoken', response.data.token)
-            return response.data.token
+            console.log(response)
+            localStorage.setItem('usertoken', response.data.access_token)
+            return response.data.access_token
         })
         .catch(err => {
             console.log(err)
@@ -49,4 +47,5 @@ export const getProfile = () => {
         .catch(err => {
             console.log(err)
         })
+
 }
