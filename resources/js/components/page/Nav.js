@@ -18,6 +18,9 @@ function Nav() {
                         <a className="nav-link" href="#Home">Home</a>
                     </li>
                     <li className="nav-item" data-toggle="collapse" data-target="#navbarTogglerDemo02">
+                        <a className="nav-link" href="#What">What?</a>
+                    </li>
+                    <li className="nav-item" data-toggle="collapse" data-target="#navbarTogglerDemo02">
                         <a className="nav-link" href="#Why">Why?</a>
                     </li>
                     <li className="nav-item" data-toggle="collapse" data-target="#navbarTogglerDemo02">
