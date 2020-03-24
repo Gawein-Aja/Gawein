@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/gawein.iml" filepath="$PROJECT_DIR$/.idea/gawein.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/gawein-project.iml" filepath="$PROJECT_DIR$/.idea/gawein-project.iml" />
     </modules>
   </component>
 </project>
