@@ -5,30 +5,20 @@ import {
     Switch,
     Route
 } from "react-router-dom";
-import Landingpage from "./landingpage/Landingpage";
-import Login from "./landingpage/Login";
-import Regispage from "./landingpage/Regispage";
-import Navbar from "./landingpage/Navbar";
-import Profile from "./landingpage/Profile";
+import Landingpage from "./page/Landingpage";
+import Loginpage from "./page/Loginpage";
+import Regispage from "./page/Regispage";
+import Profile from "./page/Profile";
 function App() {
     return (
         <Router>
             <Switch>
                 <Route exact path="/" component={Landingpage} />
-                <Route path="/login" component={Login} />
+                <Route path="/login" component={Loginpage} />
                 <Route path="/register" component={Regispage} />
-                <Route path="/profile" component={Profile} />
             </Switch>
         </Router>
     );
-}
-
-function About() {
-    return <h2>About</h2>;
-}
-
-function Users() {
-    return <h2>Users</h2>;
 }
 
 export default App;

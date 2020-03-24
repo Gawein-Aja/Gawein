@@ -69702,12 +69702,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
-/* harmony import */ var _landingpage_Landingpage__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./landingpage/Landingpage */ "./resources/js/components/landingpage/Landingpage.js");
-/* harmony import */ var _landingpage_Login__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./landingpage/Login */ "./resources/js/components/landingpage/Login.js");
-/* harmony import */ var _landingpage_Regispage__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./landingpage/Regispage */ "./resources/js/components/landingpage/Regispage.js");
-/* harmony import */ var _landingpage_Navbar__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./landingpage/Navbar */ "./resources/js/components/landingpage/Navbar.js");
-/* harmony import */ var _landingpage_Profile__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./landingpage/Profile */ "./resources/js/components/landingpage/Profile.js");
-
+/* harmony import */ var _page_Landingpage__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./page/Landingpage */ "./resources/js/components/page/Landingpage.js");
+/* harmony import */ var _page_Loginpage__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./page/Loginpage */ "./resources/js/components/page/Loginpage.js");
+/* harmony import */ var _page_Regispage__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./page/Regispage */ "./resources/js/components/page/Regispage.js");
+/* harmony import */ var _page_Profile__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./page/Profile */ "./resources/js/components/page/Profile.js");
 
 
 
@@ -69720,25 +69718,14 @@ function App() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["BrowserRouter"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Switch"], null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
     exact: true,
     path: "/",
-    component: _landingpage_Landingpage__WEBPACK_IMPORTED_MODULE_3__["default"]
+    component: _page_Landingpage__WEBPACK_IMPORTED_MODULE_3__["default"]
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
     path: "/login",
-    component: _landingpage_Login__WEBPACK_IMPORTED_MODULE_4__["default"]
+    component: _page_Loginpage__WEBPACK_IMPORTED_MODULE_4__["default"]
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
     path: "/register",
-    component: _landingpage_Regispage__WEBPACK_IMPORTED_MODULE_5__["default"]
-  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
-    path: "/profile",
-    component: _landingpage_Profile__WEBPACK_IMPORTED_MODULE_7__["default"]
+    component: _page_Regispage__WEBPACK_IMPORTED_MODULE_5__["default"]
   })));
-}
-
-function About() {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "About");
-}
-
-function Users() {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", null, "Users");
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (App);
@@ -69749,10 +69736,10 @@ if (document.getElementById('root')) {
 
 /***/ }),
 
-/***/ "./resources/js/components/landingpage/Landingpage.js":
-/*!************************************************************!*\
-  !*** ./resources/js/components/landingpage/Landingpage.js ***!
-  \************************************************************/
+/***/ "./resources/js/components/page/Landingpage.js":
+/*!*****************************************************!*\
+  !*** ./resources/js/components/page/Landingpage.js ***!
+  \*****************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -69760,7 +69747,9 @@ if (document.getElementById('root')) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _Nav__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Nav */ "./resources/js/components/landingpage/Nav.js");
+/* harmony import */ var _Nav__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Nav */ "./resources/js/components/page/Nav.js");
+/* harmony import */ var _tools_Footer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../tools/Footer */ "./resources/js/components/tools/Footer.js");
+/* harmony import */ var _tools_Section__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../tools/Section */ "./resources/js/components/tools/Section.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -69782,6 +69771,8 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
+
+
 var Landingpage = /*#__PURE__*/function (_Component) {
   _inherits(Landingpage, _Component);
 
@@ -69795,12 +69786,12 @@ var Landingpage = /*#__PURE__*/function (_Component) {
     key: "render",
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Nav__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("header", {
-        id: "upper",
+        id: "Home",
         className: "intro-header"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "container container-md"
+        className: "container container-md align-items-center"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "row justify-content-center"
+        className: "row justify-content-around"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "col-lg-8 col-md-10"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -69809,57 +69800,46 @@ var Landingpage = /*#__PURE__*/function (_Component) {
         className: "small"
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
         className: "subheading"
-      }, "Situs marketplace freelance, jasa dan produk digital yang mempertemukan pihak pencari jasa dengan para freelancer.")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
-        id: "Home",
-        className: "container-fluid section"
+      }, "Situs marketplace freelance, jasa dan produk digital yang mempertemukan pihak pencari jasa dengan para freelancer.")))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_tools_Section__WEBPACK_IMPORTED_MODULE_3__["default"], {
+        id: "What"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "row justify-content-center"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "col-md-4 content p-4"
+        className: "col-md-4 p-4"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
         src: "https://drive.google.com/uc?id=1tS5F83No-pNAWEZMurWVyc0RT7NdfdxY",
         className: "img-fluid",
         alt: ""
       })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "col-md-7 offset-md-1 content"
+        className: "col-md-7 offset-md-1"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Apa itu Website Gawein?"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         className: "lead text-justify"
-      }, "GaweIn adalah situs marketplace freelance, jasa dan produk digital yang mempertemukan pihak pencari jasa dengan para freelancer. Didirikan pada Februari 2020, GaweIn menyediakan tempat untuk para pencari kerja dan pebisnis yang membutuhkan jasa dari setiap jurusan dan berbagai bidang kategori pekerjaan.  Selain mendapatkan proyek dan menawarkan jasa, pengguna situs juga dapat melakukan transaksi jual-beli produk digital.")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+      }, "GaweIn adalah situs marketplace freelance, jasa dan produk digital yang mempertemukan pihak pencari jasa dengan para freelancer. Didirikan pada Februari 2020, GaweIn menyediakan tempat untuk para pencari kerja dan pebisnis yang membutuhkan jasa dari setiap jurusan dan berbagai bidang kategori pekerjaan.  Selain mendapatkan proyek dan menawarkan jasa, pengguna situs juga dapat melakukan transaksi jual-beli produk digital."))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_tools_Section__WEBPACK_IMPORTED_MODULE_3__["default"], {
         id: "Why",
-        className: "container-fluid section-2"
+        title: "Mengapa Gawein Aja?"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "row justify-content-center"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "col-md-11 text-center content"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Mengapa Gawein Aja?")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "col-md-3 card"
+        className: "col-md-4 card-detail"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "AMAN"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         className: "lead text-justify"
       }, "Jaminan User terverifikasi merupakan civitas akademika POLBAN."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         className: "lead text-justify"
       }, "Memiliki tim bantuan untuk menyelesaikan permasalahan project yang terjadi.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "col-md-3 card offset-md-1"
+        className: "col-md-4 card-detail"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "JELAS"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         className: "lead text-justify"
       }, "Semua detail pekerjaan, deskripsi, deadline sudah disepakati sejak awal."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         className: "lead text-justify"
       }, "Sistem penilaian yang transparan, memudahkan semua pihak dalam menentukan pilihan dan terhindar dari penipuan.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "col-md-3 card offset-md-1"
+        className: "col-md-4 card-detail"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "AKURAT"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         className: "lead text-justify"
       }, "Owner bisa mencari tenaga ahli di bidangnya dengan cepat & benar karena adanya kategori."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         className: "lead text-justify"
       }, "Worker bisa mendapatkan pekerjaan yang sesuai dengan bidangnya."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         className: "lead text-justify"
-      }, "Owner hanya membayar biaya yang sudah disepakati")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
-        id: "Procedure",
-        className: "container-fluid section-2"
+      }, "Owner hanya membayar biaya yang sudah disepakati"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_tools_Section__WEBPACK_IMPORTED_MODULE_3__["default"], {
+        title: "Bagaimana Cara Kerja?",
+        id: "Procedure"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "row justify-content-center"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "col-md-11 text-center content"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Bagaimana Cara Kerja?")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "col-md-5 card"
+        className: "col-md-6 card-detail"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
         className: "fas fa-briefcase mr-1"
       }), "OWNER"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
@@ -69871,7 +69851,7 @@ var Landingpage = /*#__PURE__*/function (_Component) {
       }, "Transfer ke rekening perusahaan GaweIn Aja."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         className: "lead text-justify"
       }, "Terima hasil dari Worker.")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "col-md-5 card offset-md-1"
+        className: "col-md-6 card-detail"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
         className: "fas fa-handshake mr-1"
       }), "WORKER"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
@@ -69882,36 +69862,7 @@ var Landingpage = /*#__PURE__*/function (_Component) {
         className: "lead text-justify"
       }, "Mengerjakan project dan upload."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         className: "lead text-justify"
-      }, "Terima hasil dari Owner.")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("footer", {
-        className: "container-fluid bg-dark",
-        id: "Contact"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "row justify-content-center"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "col-md-6"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", null, "Contact"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-        className: "fas fa-user mr-2"
-      }), "Gina Melinia - WP Penjualan."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-        className: "fas fa-mobile-alt mr-2"
-      }), "+6282321570639"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-        className: "fas fa-user mr-2"
-      }), "Adhitya Febhiakbar - Chief Marketing Officer."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-        className: "fas fa-mobile-alt mr-2"
-      }), "+6282262465487")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "col-md-3"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", null, "Social Media"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        className: "btn"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
-        className: "fab fa-instagram"
-      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "@gawein"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "col-md-3"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", null, "Login or Register?"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        className: "btn btn-outline-primary",
-        type: ""
-      }, "Login"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("br", null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        className: "btn btn-outline-secondary mt-3",
-        type: ""
-      }, "Register")))));
+      }, "Terima hasil dari Owner."))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_tools_Footer__WEBPACK_IMPORTED_MODULE_2__["default"], null));
     }
   }]);
 
@@ -69922,10 +69873,10 @@ var Landingpage = /*#__PURE__*/function (_Component) {
 
 /***/ }),
 
-/***/ "./resources/js/components/landingpage/Login.js":
-/*!******************************************************!*\
-  !*** ./resources/js/components/landingpage/Login.js ***!
-  \******************************************************/
+/***/ "./resources/js/components/page/Loginpage.js":
+/*!***************************************************!*\
+  !*** ./resources/js/components/page/Loginpage.js ***!
+  \***************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -69933,8 +69884,8 @@ var Landingpage = /*#__PURE__*/function (_Component) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _Nav2__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Nav2 */ "./resources/js/components/landingpage/Nav2.js");
-/* harmony import */ var _UserFunctions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./UserFunctions */ "./resources/js/components/landingpage/UserFunctions.js");
+/* harmony import */ var _Nav2__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Nav2 */ "./resources/js/components/page/Nav2.js");
+/* harmony import */ var _UserFunctions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./UserFunctions */ "./resources/js/components/page/UserFunctions.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
@@ -69959,15 +69910,15 @@ function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || func
 
 
 
-var Login = /*#__PURE__*/function (_Component) {
-  _inherits(Login, _Component);
+var Loginpage = /*#__PURE__*/function (_Component) {
+  _inherits(Loginpage, _Component);
 
-  function Login() {
+  function Loginpage() {
     var _this;
 
-    _classCallCheck(this, Login);
+    _classCallCheck(this, Loginpage);
 
-    _this = _possibleConstructorReturn(this, _getPrototypeOf(Login).call(this));
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(Loginpage).call(this));
     _this.state = {
       email: '',
       password: '',
@@ -69978,7 +69929,7 @@ var Login = /*#__PURE__*/function (_Component) {
     return _this;
   }
 
-  _createClass(Login, [{
+  _createClass(Loginpage, [{
     key: "onChange",
     value: function onChange(e) {
       this.setState(_defineProperty({}, e.target.name, e.target.value));
@@ -70002,57 +69953,51 @@ var Login = /*#__PURE__*/function (_Component) {
   }, {
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "container"
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Nav2__WEBPACK_IMPORTED_MODULE_1__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "wrapper fadeInDown"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "row"
+        className: "formContent"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "col-md-6 mt-5 mx-auto"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
-        noValidate: true,
-        onSubmit: this.onSubmit
+        className: "fadeIn first"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
-        className: "h3 mb-3 font-weight-normal"
-      }, "Please sign in"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "icon"
+      }, "Login")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+        noValidate: true,
+        onSubmit: this.onSubmit,
         className: "form-group"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-        htmlFor: "email"
-      }, "Email address"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "email",
-        className: "form-control",
+        className: "form-control fadeIn second",
         name: "email",
-        placeholder: "Enter email",
+        placeholder: "Email",
         value: this.state.email,
         onChange: this.onChange
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "form-group"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-        htmlFor: "password"
-      }, "Password"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "password",
-        className: "form-control",
+        className: "form-control fadeIn third",
         name: "password",
         placeholder: "Password",
         value: this.state.password,
         onChange: this.onChange
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         type: "submit",
-        className: "btn btn-lg btn-primary btn-block"
-      }, " Sign in")))));
+        className: "btn btn-primary fadeIn fourth",
+        value: "Submit"
+      }, "Log In")))));
     }
   }]);
 
-  return Login;
+  return Loginpage;
 }(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
 
-/* harmony default export */ __webpack_exports__["default"] = (Login);
+/* harmony default export */ __webpack_exports__["default"] = (Loginpage);
 
 /***/ }),
 
-/***/ "./resources/js/components/landingpage/Nav.js":
-/*!****************************************************!*\
-  !*** ./resources/js/components/landingpage/Nav.js ***!
-  \****************************************************/
+/***/ "./resources/js/components/page/Nav.js":
+/*!*********************************************!*\
+  !*** ./resources/js/components/page/Nav.js ***!
+  \*********************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -70101,6 +70046,13 @@ function Nav() {
     "data-target": "#navbarTogglerDemo02"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
     className: "nav-link",
+    href: "#What"
+  }, "What?")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    className: "nav-item",
+    "data-toggle": "collapse",
+    "data-target": "#navbarTogglerDemo02"
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    className: "nav-link",
     href: "#Why"
   }, "Why?")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "nav-item",
@@ -70135,10 +70087,10 @@ function Nav() {
 
 /***/ }),
 
-/***/ "./resources/js/components/landingpage/Nav2.js":
-/*!*****************************************************!*\
-  !*** ./resources/js/components/landingpage/Nav2.js ***!
-  \*****************************************************/
+/***/ "./resources/js/components/page/Nav2.js":
+/*!**********************************************!*\
+  !*** ./resources/js/components/page/Nav2.js ***!
+  \**********************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -70211,10 +70163,10 @@ var Nav2 = /*#__PURE__*/function (_Component) {
 
 /***/ }),
 
-/***/ "./resources/js/components/landingpage/Navbar.js":
-/*!*******************************************************!*\
-  !*** ./resources/js/components/landingpage/Navbar.js ***!
-  \*******************************************************/
+/***/ "./resources/js/components/page/Profile.js":
+/*!*************************************************!*\
+  !*** ./resources/js/components/page/Profile.js ***!
+  \*************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -70222,119 +70174,7 @@ var Nav2 = /*#__PURE__*/function (_Component) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
-function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-
-
-
-var Landing = /*#__PURE__*/function (_Component) {
-  _inherits(Landing, _Component);
-
-  function Landing() {
-    _classCallCheck(this, Landing);
-
-    return _possibleConstructorReturn(this, _getPrototypeOf(Landing).apply(this, arguments));
-  }
-
-  _createClass(Landing, [{
-    key: "logOut",
-    value: function logOut(e) {
-      e.preventDefault();
-      localStorage.removeItem('usertoken');
-      this.props.history.push("/");
-    }
-  }, {
-    key: "render",
-    value: function render() {
-      var loginRegLink = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
-        className: "navbar-nav"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-        className: "nav-item"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-        to: "/login",
-        className: "nav-link"
-      }, "Login")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-        className: "nav-item"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-        to: "/register",
-        className: "nav-link"
-      }, "Register")));
-      var userLink = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
-        className: "navbar-nav"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-        className: "nav-item"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-        to: "/profile",
-        className: "nav-link"
-      }, "User")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-        className: "nav-item"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-        href: "",
-        onClick: this.logOut.bind(this),
-        className: "nav-link"
-      }, "Logout")));
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
-        className: "navbar navbar-expand-lg navbar-dark bg-dark rounded"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        className: "navbar-toggler",
-        type: "button",
-        "data-toggle": "collapse",
-        "data-target": "#navbarsExample10",
-        "aria-controls": "navbarsExample10",
-        "aria-expanded": "false",
-        "aria-label": "Toggle navigation"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-        className: "navbar-toggler-icon"
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "collapse navbar-collapse justify-content-md-center",
-        id: "navbarsExample10"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
-        className: "navbar-nav"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
-        className: "nav-item"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
-        to: "/",
-        className: "nav-link"
-      }, "Home"))), localStorage.usertoken ? userLink : loginRegLink));
-    }
-  }]);
-
-  return Landing;
-}(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
-
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["withRouter"])(Landing));
-
-/***/ }),
-
-/***/ "./resources/js/components/landingpage/Profile.js":
-/*!********************************************************!*\
-  !*** ./resources/js/components/landingpage/Profile.js ***!
-  \********************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _UserFunctions__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./UserFunctions */ "./resources/js/components/landingpage/UserFunctions.js");
+/* harmony import */ var _UserFunctions__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./UserFunctions */ "./resources/js/components/page/UserFunctions.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -70408,10 +70248,10 @@ var Profile = /*#__PURE__*/function (_Component) {
 
 /***/ }),
 
-/***/ "./resources/js/components/landingpage/Regispage.js":
-/*!**********************************************************!*\
-  !*** ./resources/js/components/landingpage/Regispage.js ***!
-  \**********************************************************/
+/***/ "./resources/js/components/page/Regispage.js":
+/*!***************************************************!*\
+  !*** ./resources/js/components/page/Regispage.js ***!
+  \***************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -70419,7 +70259,8 @@ var Profile = /*#__PURE__*/function (_Component) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _UserFunctions__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./UserFunctions */ "./resources/js/components/landingpage/UserFunctions.js");
+/* harmony import */ var _UserFunctions__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./UserFunctions */ "./resources/js/components/page/UserFunctions.js");
+/* harmony import */ var _Nav2__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Nav2 */ "./resources/js/components/page/Nav2.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
@@ -70439,6 +70280,7 @@ function _assertThisInitialized(self) { if (self === void 0) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
 
 
 
@@ -70489,76 +70331,58 @@ var Registerpage = /*#__PURE__*/function (_Component) {
   }, {
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "container"
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Nav2__WEBPACK_IMPORTED_MODULE_2__["default"], null), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "wrapper fadeInDown"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "row"
+        className: "formContent"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "col-md-6 mt-5 mx-auto"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
-        noValidate: true,
-        onSubmit: this.onSubmit
+        className: "fadeIn first"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
-        className: "h3 mb-3 font-weight-normal"
-      }, "Register"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "icon"
+      }, "Register")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+        noValidate: true,
+        onSubmit: this.onSubmit,
         className: "form-group"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-        htmlFor: "name"
-      }, "First name"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "text",
-        className: "form-control",
+        className: "form-control fadeIn second",
         name: "first_name",
-        placeholder: "Enter your first name",
+        placeholder: "Nama Depan",
         value: this.state.first_name,
         onChange: this.onChange
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "form-group"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-        htmlFor: "name"
-      }, "Last name"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "text",
-        className: "form-control",
+        className: "form-control fadeIn second",
         name: "last_name",
-        placeholder: "Enter your lastname name",
+        placeholder: "Nama Belakang",
         value: this.state.last_name,
         onChange: this.onChange
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "form-group"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-        htmlFor: "email"
-      }, "Email address"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "email",
-        className: "form-control",
+        className: "form-control fadeIn third",
         name: "email",
-        placeholder: "Enter email",
+        placeholder: "Email",
         value: this.state.email,
         onChange: this.onChange
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "form-group"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-        htmlFor: "password"
-      }, "Password"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "password",
-        className: "form-control",
+        className: "form-control fadeIn second",
         name: "password",
         placeholder: "Password",
         value: this.state.password,
         onChange: this.onChange
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "form-group"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
-        htmlFor: "password_confirmations"
-      }, "PasswordConfirm"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
         type: "password",
-        className: "form-control",
+        className: "form-control fadeIn third",
         name: "password_confirmation",
-        placeholder: "Password_confirmation",
+        placeholder: "Konfirmasi Password",
         value: this.state.password_confirmation,
         onChange: this.onChange
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
         type: "submit",
-        className: "btn btn-lg btn-primary btn-block"
-      }, "Register!")))));
+        className: "btn btn-primary fadeIn fourth",
+        value: "Submit"
+      }, "Register Now")))));
     }
   }]);
 
@@ -70569,10 +70393,10 @@ var Registerpage = /*#__PURE__*/function (_Component) {
 
 /***/ }),
 
-/***/ "./resources/js/components/landingpage/UserFunctions.js":
-/*!**************************************************************!*\
-  !*** ./resources/js/components/landingpage/UserFunctions.js ***!
-  \**************************************************************/
+/***/ "./resources/js/components/page/UserFunctions.js":
+/*!*******************************************************!*\
+  !*** ./resources/js/components/page/UserFunctions.js ***!
+  \*******************************************************/
 /*! exports provided: register, login, getProfile */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -70628,6 +70452,182 @@ var getProfile = function getProfile() {
 
 /***/ }),
 
+/***/ "./resources/js/components/tools/Footer.js":
+/*!*************************************************!*\
+  !*** ./resources/js/components/tools/Footer.js ***!
+  \*************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+
+
+var Footer = /*#__PURE__*/function (_Component) {
+  _inherits(Footer, _Component);
+
+  function Footer() {
+    _classCallCheck(this, Footer);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(Footer).apply(this, arguments));
+  }
+
+  _createClass(Footer, [{
+    key: "render",
+    value: function render() {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("footer", {
+        id: "Contact",
+        className: "container-fluid bg-dark align-items-center"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "container"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "row justify-content-around footer-body"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-xs-12 col-sm-6 col-lg-5"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
+        className: "widget-title"
+      }, "Contact Us", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "fas fa-user mr-2"
+      }), "Gina Melinia - WP Penjualan."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "fas fa-mobile-alt mr-2"
+      }), "+6282321570639"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "fas fa-user mr-2"
+      }), "Adhitya Febhiakbar - Chief Marketing Officer."), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "fas fa-mobile-alt mr-2"
+      }), "+6282262465487"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        className: "fab fa-instagram mr-2"
+      }), "@gawein"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-xs-12 col-sm-6 col-lg-3 offset-lg-3"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
+        className: "widget-title"
+      }, "Subscribe", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+        className: "form-group"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        className: "form-control",
+        type: "text",
+        name: "name",
+        placeholder: "Name"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        className: "form-control",
+        type: "email",
+        name: "email",
+        placeholder: "Email Address"
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        className: "btn btn-primary",
+        type: "submit"
+      }, "Submit"))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "row justify-content-around footer-copyright"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-md-12 text-center"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, "Copyright Gawein Aja \xA9 2020. All rights reserved."))));
+    }
+  }]);
+
+  return Footer;
+}(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
+
+/* harmony default export */ __webpack_exports__["default"] = (Footer);
+
+/***/ }),
+
+/***/ "./resources/js/components/tools/Section.js":
+/*!**************************************************!*\
+  !*** ./resources/js/components/tools/Section.js ***!
+  \**************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+
+
+
+var Section = /*#__PURE__*/function (_PureComponent) {
+  _inherits(Section, _PureComponent);
+
+  function Section() {
+    _classCallCheck(this, Section);
+
+    return _possibleConstructorReturn(this, _getPrototypeOf(Section).apply(this, arguments));
+  }
+
+  _createClass(Section, [{
+    key: "render",
+    value: function render() {
+      var _this$props = this.props,
+          children = _this$props.children,
+          title = _this$props.title,
+          id = _this$props.id;
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("section", {
+        id: id,
+        className: "container align-items-center"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "row justify-content-around"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "col-11"
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+        className: "text-center"
+      }, title)), children));
+    }
+  }]);
+
+  return Section;
+}(react__WEBPACK_IMPORTED_MODULE_0__["PureComponent"]);
+
+Section.propTypes = {
+  /** Contents of the card */
+  children: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.node.isRequired,
+
+  /** Title of the card */
+  title: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string.isRequired,
+  id: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string.isRequired
+};
+/* harmony default export */ __webpack_exports__["default"] = (Section);
+
+/***/ }),
+
 /***/ "./resources/sass/app.scss":
 /*!*********************************!*\
   !*** ./resources/sass/app.scss ***!
@@ -70646,8 +70646,8 @@ var getProfile = function getProfile() {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /home/rifqi/Desktop/Gawein/gawein-project/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /home/rifqi/Desktop/Gawein/gawein-project/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /opt/lampp/htdocs/Gawein/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /opt/lampp/htdocs/Gawein/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
