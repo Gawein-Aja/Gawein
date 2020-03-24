@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Gawein Aja</title>
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat|Google+Sans:100,300,400,500,700,900,100i,300i,400i,500i,700i,900i&display=swap" rel="stylesheet">
         <link href="/css/app.css" rel="stylesheet">
     </head>
     <body>
