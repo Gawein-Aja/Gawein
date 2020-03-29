@@ -9,6 +9,8 @@
 - ```cd /var/www/gawein/gawein-project/```
 - ```git clone https://github.com/Gawein-Aja/Gawein.git .``` (" . " di folder tersebut)
 - ```composer install```
+- ```php artisan migrate```
+- ```php artisan passport:install```
 - ```cp .env.example .env```
 - ```php artisan key:generate```
 - ```nano .env```
