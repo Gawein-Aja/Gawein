@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Auth;
 use Carbon\Carbon;
 use App\Notifications\SignupActivate;
 use App\User;
+use Illuminate\Http\RedirectResponse;
 class AuthController extends Controller
 {
     /**
@@ -104,7 +105,7 @@ class AuthController extends Controller
 		], 404);
 	    }    $user->active = true;
 	    $user->activation_token = '';
-	    $user->save();    return $user;
+	    $user->save();    return redirect('login');;
     }
 
 
