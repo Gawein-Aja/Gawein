@@ -3,8 +3,8 @@ import React from 'react';
 function Nav() {
     return (
         <nav className="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
-            <a className="navbar-brand bg-light rounded p-2" href="/">
-                <img src="https://drive.google.com/uc?id=1tS5F83No-pNAWEZMurWVyc0RT7NdfdxY"
+            <a className="navbar-brand" href="/">
+                <img src="/assets/logo-gawein.svg"
                      height="30" className="d-inline-block align-top" alt=""/>
             </a>
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"

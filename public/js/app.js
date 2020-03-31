@@ -69725,6 +69725,9 @@ function App() {
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
     path: "/register",
     component: _page_Regispage__WEBPACK_IMPORTED_MODULE_5__["default"]
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
+    path: "/profile",
+    component: _page_Profile__WEBPACK_IMPORTED_MODULE_6__["default"]
   })));
 }
 
@@ -70011,10 +70014,10 @@ function Nav() {
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
     className: "navbar fixed-top navbar-expand-lg navbar-dark bg-dark"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
-    className: "navbar-brand bg-light rounded p-2",
+    className: "navbar-brand",
     href: "/"
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-    src: "https://drive.google.com/uc?id=1tS5F83No-pNAWEZMurWVyc0RT7NdfdxY",
+    src: "/assets/logo-gawein.svg",
     height: "30",
     className: "d-inline-block align-top",
     alt: ""
