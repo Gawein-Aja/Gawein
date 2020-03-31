@@ -69725,6 +69725,9 @@ function App() {
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
     path: "/register",
     component: _page_Regispage__WEBPACK_IMPORTED_MODULE_5__["default"]
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
+    path: "/profile",
+    component: _page_Profile__WEBPACK_IMPORTED_MODULE_6__["default"]
   })));
 }
 
@@ -70646,8 +70649,8 @@ Section.propTypes = {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /opt/lampp/htdocs/Gawein/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /opt/lampp/htdocs/Gawein/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /home/rifqi/Desktop/Gawein/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /home/rifqi/Desktop/Gawein/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
