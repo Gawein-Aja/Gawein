@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {getProfile} from "../tools/UserFunctions";
+import {getAllPost} from "../tools/PostFunction";
 
 class WorkerPage extends Component {
     constructor() {
@@ -10,7 +10,7 @@ class WorkerPage extends Component {
     }
 
     componentDidMount() {
-        getProfile().then(res => {
+        getAllPost().then(res => {
             this.setState({
                 allpost: res
             })
