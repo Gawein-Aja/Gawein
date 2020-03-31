@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { register } from './UserFunctions'
+import { register } from '../tools/UserFunctions'
 import Nav2 from "./Nav2";
 
 class Registerpage extends Component {

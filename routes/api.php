@@ -15,15 +15,22 @@ use Illuminate\Http\Request;
 
 Route::group([
     'prefix' => 'auth'
-], function () {
-    Route::post('login', 'AuthController@login');
-    Route::post('signup', 'AuthController@signup');
-  
-    Route::get('signup/activate/{token}', 'AuthController@signupActivate');
-    Route::group([
-      'middleware' => 'auth:api'
-    ], function() {
+],
+    function () {
+        Route::post('login', 'AuthController@login');
+        Route::post('signup', 'AuthController@signup');
+
+        Route::get('signup/activate/{token}', 'AuthController@signupActivate');
+        Route::group([
+            'middleware' => 'auth:api'
+        ],
+    function() {
         Route::get('logout', 'AuthController@logout');
         Route::get('user', 'AuthController@user');
+        Route::get('posting', 'PostingController@index');
+        Route::post('post', 'PostingController@store');
+        Route::get('post/{id}', 'PostingController@show');
+        Route::post('postupdate/{id}', 'PostingController@update');
+        Route::delete('postdelete/{id}', 'PostingController@destroy');
     });
 });

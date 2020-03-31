@@ -22,4 +22,9 @@ class User extends Authenticatable
     ];
 
     protected $dates = ['deleted_at'];
+
+    public function postings()
+	{
+    	  return $this->hasMany(Posting::class);
+	}
 }

@@ -69706,6 +69706,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _page_Loginpage__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./page/Loginpage */ "./resources/js/components/page/Loginpage.js");
 /* harmony import */ var _page_Regispage__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./page/Regispage */ "./resources/js/components/page/Regispage.js");
 /* harmony import */ var _page_Profile__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./page/Profile */ "./resources/js/components/page/Profile.js");
+/* harmony import */ var _page_WorkerPage__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./page/WorkerPage */ "./resources/js/components/page/WorkerPage.js");
+
 
 
 
@@ -69728,6 +69730,9 @@ function App() {
   }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
     path: "/profile",
     component: _page_Profile__WEBPACK_IMPORTED_MODULE_6__["default"]
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Route"], {
+    path: "/worker",
+    component: _page_WorkerPage__WEBPACK_IMPORTED_MODULE_7__["default"]
   })));
 }
 
@@ -69888,7 +69893,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _Nav2__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Nav2 */ "./resources/js/components/page/Nav2.js");
-/* harmony import */ var _UserFunctions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./UserFunctions */ "./resources/js/components/page/UserFunctions.js");
+/* harmony import */ var _tools_UserFunctions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../tools/UserFunctions */ "./resources/js/components/tools/UserFunctions.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
@@ -69947,7 +69952,7 @@ var Loginpage = /*#__PURE__*/function (_Component) {
         email: this.state.email,
         password: this.state.password
       };
-      Object(_UserFunctions__WEBPACK_IMPORTED_MODULE_2__["login"])(user).then(function (res) {
+      Object(_tools_UserFunctions__WEBPACK_IMPORTED_MODULE_2__["login"])(user).then(function (res) {
         if (res) {
           _this2.props.history.push("/profile");
         }
@@ -70177,7 +70182,7 @@ var Nav2 = /*#__PURE__*/function (_Component) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _UserFunctions__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./UserFunctions */ "./resources/js/components/page/UserFunctions.js");
+/* harmony import */ var _tools_UserFunctions__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../tools/UserFunctions */ "./resources/js/components/tools/UserFunctions.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -70220,7 +70225,7 @@ var Profile = /*#__PURE__*/function (_Component) {
     value: function componentDidMount() {
       var _this2 = this;
 
-      Object(_UserFunctions__WEBPACK_IMPORTED_MODULE_1__["getProfile"])().then(function (res) {
+      Object(_tools_UserFunctions__WEBPACK_IMPORTED_MODULE_1__["getProfile"])().then(function (res) {
         _this2.setState({
           name: res.name,
           email: res.email
@@ -70262,7 +70267,7 @@ var Profile = /*#__PURE__*/function (_Component) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _UserFunctions__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./UserFunctions */ "./resources/js/components/page/UserFunctions.js");
+/* harmony import */ var _tools_UserFunctions__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../tools/UserFunctions */ "./resources/js/components/tools/UserFunctions.js");
 /* harmony import */ var _Nav2__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Nav2 */ "./resources/js/components/page/Nav2.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -70327,7 +70332,7 @@ var Registerpage = /*#__PURE__*/function (_Component) {
         password: this.state.password,
         password_confirmation: this.state.password_confirmation
       };
-      Object(_UserFunctions__WEBPACK_IMPORTED_MODULE_1__["register"])(newUser).then(function (res) {
+      Object(_tools_UserFunctions__WEBPACK_IMPORTED_MODULE_1__["register"])(newUser).then(function (res) {
         _this2.props.history.push("/login");
       });
     }
@@ -70396,62 +70401,96 @@ var Registerpage = /*#__PURE__*/function (_Component) {
 
 /***/ }),
 
-/***/ "./resources/js/components/page/UserFunctions.js":
-/*!*******************************************************!*\
-  !*** ./resources/js/components/page/UserFunctions.js ***!
-  \*******************************************************/
-/*! exports provided: register, login, getProfile */
+/***/ "./resources/js/components/page/WorkerPage.js":
+/*!****************************************************!*\
+  !*** ./resources/js/components/page/WorkerPage.js ***!
+  \****************************************************/
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "register", function() { return register; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "login", function() { return login; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getProfile", function() { return getProfile; });
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _tools_UserFunctions__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../tools/UserFunctions */ "./resources/js/components/tools/UserFunctions.js");
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
-var register = function register(newUser) {
-  return axios__WEBPACK_IMPORTED_MODULE_0___default.a.post('api/auth/signup', newUser, {
-    headers: {
-      'Content-Type': 'application/json',
-      'X-Requested-With': 'XMLHttpRequest'
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+
+
+
+var WorkerPage = /*#__PURE__*/function (_Component) {
+  _inherits(WorkerPage, _Component);
+
+  function WorkerPage() {
+    var _this;
+
+    _classCallCheck(this, WorkerPage);
+
+    _this = _possibleConstructorReturn(this, _getPrototypeOf(WorkerPage).call(this));
+    _this.state = {
+      allpost: []
+    };
+    return _this;
+  }
+
+  _createClass(WorkerPage, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      var _this2 = this;
+
+      Object(_tools_UserFunctions__WEBPACK_IMPORTED_MODULE_1__["getProfile"])().then(function (res) {
+        _this2.setState({
+          allpost: res
+        });
+      });
     }
-  }).then(function (response) {
-    console.log(response);
-  })["catch"](function (err) {
-    console.log(err);
-  });
-};
-var login = function login(user) {
-  return axios__WEBPACK_IMPORTED_MODULE_0___default.a.post('api/auth/login', {
-    email: user.email,
-    password: user.password
   }, {
-    headers: {
-      'Content-Type': 'application/json',
-      'X-Requested-With': 'XMLHttpRequest'
+    key: "render",
+    value: function render() {
+      var allpost = this.state.allpost.map(function (post) {
+        return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "card",
+          style: "width: 18rem;"
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+          className: "card-img-top",
+          src: "...",
+          alt: "Card image cap"
+        }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+          className: "card-body",
+          key: post.id
+        }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
+          className: "card-title"
+        }, post.header_post), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+          className: "card-text"
+        }, post.isi_post), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+          href: "#",
+          className: "btn btn-primary"
+        }, "Detail")));
+      });
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, allpost);
     }
-  }).then(function (response) {
-    console.log(response);
-    localStorage.setItem('usertoken', response.data.access_token);
-    return response.data.access_token;
-  })["catch"](function (err) {
-    console.log(err);
-  });
-};
-var getProfile = function getProfile() {
-  return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('api/auth/user', {
-    headers: {
-      Authorization: "Bearer ".concat(localStorage.usertoken)
-    }
-  }).then(function (response) {
-    console.log(response);
-    return response.data;
-  })["catch"](function (err) {
-    console.log(err);
-  });
-};
+  }]);
+
+  return WorkerPage;
+}(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
+
+/* harmony default export */ __webpack_exports__["default"] = (WorkerPage);
 
 /***/ }),
 
@@ -70628,6 +70667,65 @@ Section.propTypes = {
   id: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string.isRequired
 };
 /* harmony default export */ __webpack_exports__["default"] = (Section);
+
+/***/ }),
+
+/***/ "./resources/js/components/tools/UserFunctions.js":
+/*!********************************************************!*\
+  !*** ./resources/js/components/tools/UserFunctions.js ***!
+  \********************************************************/
+/*! exports provided: register, login, getProfile */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "register", function() { return register; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "login", function() { return login; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getProfile", function() { return getProfile; });
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+
+var register = function register(newUser) {
+  return axios__WEBPACK_IMPORTED_MODULE_0___default.a.post('api/auth/signup', newUser, {
+    headers: {
+      'Content-Type': 'application/json',
+      'X-Requested-With': 'XMLHttpRequest'
+    }
+  }).then(function (response) {
+    console.log(response);
+  })["catch"](function (err) {
+    console.log(err);
+  });
+};
+var login = function login(user) {
+  return axios__WEBPACK_IMPORTED_MODULE_0___default.a.post('api/auth/login', {
+    email: user.email,
+    password: user.password
+  }, {
+    headers: {
+      'Content-Type': 'application/json',
+      'X-Requested-With': 'XMLHttpRequest'
+    }
+  }).then(function (response) {
+    console.log(response);
+    localStorage.setItem('usertoken', response.data.access_token);
+    return response.data.access_token;
+  })["catch"](function (err) {
+    console.log(err);
+  });
+};
+var getProfile = function getProfile() {
+  return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get('api/auth/user', {
+    headers: {
+      Authorization: "Bearer ".concat(localStorage.usertoken)
+    }
+  }).then(function (response) {
+    console.log(response);
+    return response.data;
+  })["catch"](function (err) {
+    console.log(err);
+  });
+};
 
 /***/ }),
 
