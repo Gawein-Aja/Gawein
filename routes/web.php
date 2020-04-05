@@ -16,5 +16,6 @@
 //});
 
 Route::view('/{path?}', 'welcome');
+Auth::routes(['verify' => true]);
 
 
