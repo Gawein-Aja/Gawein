@@ -1,6 +1,6 @@
 APP_NAME=Gawein
 APP_ENV=local
-APP_KEY=base64:i4waQRegQqVAGk5btvhya2yN8ZK0NYed2IGrfKHFN/Q=
+APP_KEY=base64:Bj6BNvrlWFMeRuJdtxTOSnae8XLNnl+v3jy1p4QHc8s=
 APP_DEBUG=true
 APP_URL=http://gawein.jtk.polban.ac.id
 

@@ -18,6 +18,7 @@ class CreatePostingsTable extends Migration
 	        $table->unsignedBigInteger('user_id');
             $table->string('header_post');
             $table->string('isi_post');
+            $table->mediumText('image')->nullable();	    
             $table->timestamps();
 
 	        $table->foreign('user_id')->references('id')->on('users');

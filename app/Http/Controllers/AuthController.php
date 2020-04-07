@@ -6,6 +6,8 @@ use Carbon\Carbon;
 use App\Notifications\SignupActivate;
 use App\User;
 use Illuminate\Http\RedirectResponse;
+use Avatar;
+use Storage;
 class AuthController extends Controller
 {
     /**
@@ -21,6 +23,7 @@ class AuthController extends Controller
     {
         $request->validate([
             'name' => 'required|string',
+	    'jurusan' => 'required|string',
             'email' => 'required|string|email|unique:users',
             'password' => 'required|string|confirmed'
         ]);        
@@ -28,11 +31,14 @@ class AuthController extends Controller
             'name' => $request->name,
             'email' => $request->email,
             'password' => bcrypt($request->password),
-	    'activation_token' => str_random(60)
+	    'activation_token' => str_random(60),
+            'nowa' => $request->nowa,
+            'jurusan' => $request->jurusan,
         ]);        
 
         $user->save();        
-        
+	$avatar = Avatar::create($user->name)->getImageObject()->encode('png');
+        Storage::put('avatars/'.$user->id.'/avatar.png', (string) $avatar);        
         $user->notify(new SignupActivate($user));
 
         return response()->json([

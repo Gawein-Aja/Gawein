@@ -7,6 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 class posting extends Model
 {
     protected $fillable = [
-        'header_post', 'isi_post'
+        'header_post', 'isi_post', 'image'
     ];
 }

@@ -42,6 +42,17 @@ class PostingController extends Controller
         $posting->header_post = $request->header_post;
         $posting->isi_post = $request->isi_post;
  	
+	if ($request->hasfile('image'))
+	{
+		$file = $request->file('image');
+		$extension = 'jpg';
+		//$extension = $file->getClientOriginalExtension();
+		$filename = time().".".$extension;
+		$file->move('uploads/posting/',$filename);
+		$posting->image = $filename;	
+	} else {
+		$posting->image = '';	
+	}
         if (auth()->user()->postings()->save($posting))
             return response()->json([
                 'success' => true,
@@ -68,8 +79,19 @@ class PostingController extends Controller
         }
  	$header_post =$request->header_post;
 	$isi_post =$request->isi_post;
-        $updated = Posting::where('id',$id)->update(['header_post'=>$header_post,'isi_post'=>$isi_post]);
- 
+	if ($request->hasfile('image'))
+	{
+		$file = $request->file('image');
+		$extension = 'jpg';
+		$filename = time().".".$extension;
+		$file->move('uploads/posting/',$filename);	
+	} 
+	else
+	{
+		$filename = $posting->image;
+	}
+        $updated = Posting::where('id',$id)->update(['header_post'=>$header_post,'isi_post'=>$isi_post,'image'=>$filename]);
+ 	
         if ($updated)
             return response()->json([
                 'success' => true,
