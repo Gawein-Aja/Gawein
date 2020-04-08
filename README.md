@@ -11,6 +11,7 @@
 - ```composer install```
 - ```php artisan migrate```
 - ```php artisan passport:install```
+- ```php artisan vendor:publish --provider="Laravolt\Avatar\ServiceProvider"```
 - ```cp .env.example .env```
 - ```php artisan key:generate```
 - ```nano .env```
