@@ -180,13 +180,15 @@ footer p {
 //Loginpage
 
 .wrapper {
-    display: flex !important;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    width: 100%;
-    min-height: 100vh !important;
-    padding: 60px 0;
+    .form-layout{
+        display: flex !important;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        min-height: 100vh !important;
+        padding: 60px 0;
+    }
 }
 
 .formContent {

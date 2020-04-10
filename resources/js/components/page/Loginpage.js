@@ -38,35 +38,37 @@ class Loginpage extends Component {
             <div>
                 <Nav2 />
                 <div className="wrapper fadeInDown">
-                    <div className="formContent">
-                        <div className="fadeIn first">
-                            <h1 className="icon">Login</h1>
+                    <div className="form-layout">
+                        <div className="formContent">
+                            <div className="fadeIn first">
+                                <h1 className="icon">Login</h1>
+                            </div>
+
+                            <form noValidate onSubmit={this.onSubmit} className="form-group">
+                                <input
+                                    type="email"
+                                    className="form-control fadeIn second"
+                                    name="email"
+                                    placeholder="Email"
+                                    value={this.state.email}
+                                    onChange={this.onChange}
+                                />
+                                <input
+                                    type="password"
+                                    className="form-control fadeIn third"
+                                    name="password"
+                                    placeholder="Password"
+                                    value={this.state.password}
+                                    onChange={this.onChange}
+                                />
+                                <button type="submit" className="btn btn-primary fadeIn fourth" value="Submit">Log In</button>
+                            </form>
+
+                            {/*<div className="formFooter">*/}
+                            {/*    <a className="underlineHover" href="#">Forgot Password?</a>*/}
+                            {/*</div>*/}
+
                         </div>
-
-                        <form noValidate onSubmit={this.onSubmit} className="form-group">
-                            <input
-                                type="email"
-                                className="form-control fadeIn second"
-                                name="email"
-                                placeholder="Email"
-                                value={this.state.email}
-                                onChange={this.onChange}
-                            />
-                            <input
-                                type="password"
-                                className="form-control fadeIn third"
-                                name="password"
-                                placeholder="Password"
-                                value={this.state.password}
-                                onChange={this.onChange}
-                            />
-                            <button type="submit" className="btn btn-primary fadeIn fourth" value="Submit">Log In</button>
-                        </form>
-
-                        {/*<div className="formFooter">*/}
-                        {/*    <a className="underlineHover" href="#">Forgot Password?</a>*/}
-                        {/*</div>*/}
-
                     </div>
                 </div>
             </div>

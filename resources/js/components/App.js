@@ -10,6 +10,7 @@ import Loginpage from "./page/Loginpage";
 import Regispage from "./page/Regispage";
 import Profile from "./page/Profile";
 import WorkerPage from "./page/WorkerPage";
+import Dashboard from "./page/Dashboard";
 function App() {
     return (
         <Router>
@@ -19,6 +20,7 @@ function App() {
                 <Route path="/register" component={Regispage} />
                 <Route path="/profile" component={Profile} />
                 <Route path="/worker" component={WorkerPage} />
+                <Route path="/dash" component={Dashboard} />
             </Switch>
         </Router>
     );

@@ -11,11 +11,9 @@
 |
 */
 //
-//Route::get('/', function () {
-//    return view('welcome');
-//});
-
-Route::view('/{path?}', 'welcome');
+Route::get('{path?}', function () {
+    return view('welcome');
+});
 Auth::routes(['verify' => true]);
 
 
