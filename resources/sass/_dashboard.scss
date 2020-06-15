@@ -5,7 +5,7 @@ $easeTime: 0.5s;
 $margin-top: 56px;
 $colors: (
     'bgdarkmode': '#343a40',
-    'darkmode': '#fff'
+    'darkmode': 'rgba(255, 255, 255, 0.5)'
 );
 
 @each $colorName, $colorValue in $colors {
@@ -25,88 +25,206 @@ body {
     @extend .text-darkmode;
 }
 
-.navbar{
-    height: rem($margin-top);
-}
-
-.wrapper {
-    margin-top: rem($margin-top);
+.dashboard {
     .sideMenu {
         position: fixed;
         top: 0;
         bottom: 0;
-        margin: rem($margin-top) auto auto;
         left: 0;
-        width: rem(200px);
-        transition: all ease $easeTime;
-        transform: translateX(-100%);
+        width: rem(250px);
+        transition: margin-left .3s ease-in-out,width .3s ease-in-out;
+        margin-left: rem(-250px);
         z-index: 2000;
+        .navbar {
+            border-bottom: 1px solid #4b545c;
+            .logo-1 {
+                transition: margin-left .3s linear,opacity .3s ease,visibility .3s ease-in-out;
+                display: inline-block !important;
+            }
+            .logo-2 {
+                transition: margin-left .3s linear,opacity .3s ease,visibility .3s ease-in-out;
+                display: inline-block !important;
+                opacity: 0;
+                visibility: hidden;
+                width: 0;
+            }
+        }
+        .sidebar {
+            overflow-y: auto;
+            padding: 0.65rem;
+            .nav-sidebar{
+                white-space: nowrap;
+                overflow: hidden;
+                position: relative;
+            }
+        }
     }
-    .content {
-        width: 100%;
-        margin-left: rem(0px);
-        transition: all ease $easeTime;
-    }
-    &.active {
+    &.sidebar-collapse {
         .sideMenu {
-            transform: translateX(0);
+            margin-left: rem(-250px);
+            box-shadow: 0 14px 28px rgba(0,0,0,.25),0 10px 10px rgba(0,0,0,.22) !important;
+            width: rem(250px);
+        }
+    }
+    &.sidebar-open {
+        .sideMenu {
+            margin-left: 0;
+            box-shadow: 0 14px 28px rgba(0,0,0,.25),0 10px 10px rgba(0,0,0,.22) !important;
+            width: rem(250px);
+        }
+        .sidebar-overlay {
+            display: block;
         }
     }
 }
 
-.nav-link {
-    align-items: center;
-    display: block;
-    white-space: nowrap;
-    .icon {
-        margin-right: rem(4px);
-        font-size: rem(30px);
-        vertical-align: middle;
-        @extend .text-darkmode;
-        height: rem(32px);
-        width: rem(32px);
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
+.nav-sidebar{
+    .nav-item {
+        position: relative;
+        margin-bottom: 0;
+        > .nav-link {
+            .right {
+                position: absolute;
+                right: 1rem;
+                top: .7rem;
+                width: rem(10px);
+                transform: rotate(0deg);
+                transition: transform ease-in-out .3s;
+            }
+        }
     }
-    .text {
-        font-size: rem(14px);
-        @extend .text-darkmode;
+    .open {
+        > .nav-link {
+            .right {
+                transform: rotate(-90deg);
+            }
+        }
     }
-    &:hover,
-    &.active {
-        @extend .bg-bgdarkmode;
-        .icon,
-        .text {
+}
+
+.wrapper {
+    margin-top: rem($margin-top);
+    nav {
+        height: rem(47px);
+        border-bottom: 1px solid #4b545c;
+        margin-left: rem(0px);
+        //transition: all ease $easeTime;
+        transition: margin-left .3s ease-in-out,width .3s ease-in-out;
+    }
+    .content {
+        width: 100%;
+        margin-left: rem(0px);
+        //transition: all ease $easeTime;
+        transition: margin-left .3s ease-in-out,width .3s ease-in-out;
+    }
+    .navbar-nav {
+        .dropdown-menu {
+            position: absolute !important;
+        }
+        .nav-link {
+            padding: 0.5rem 1rem !important;
+        }
+    }
+}
+
+.nav-sidebar{
+    .nav-link {
+        display: flex !important;
+        white-space: nowrap;
+        padding: .5rem 1rem !important;
+        margin-bottom: .2rem;
+        .icon {
+            margin-right: rem(3.2px);
+            font-size: rem(17.6px);
             @extend .text-darkmode;
+            width: rem(25.6px);
+            text-align: center;
+        }
+        .text {
+            font-size: rem(14px);
+            @extend .text-darkmode;
+            margin: 0 0 0 .3rem;
+            display: inline-block;
+            transition: margin-left .3s linear,opacity .3s ease,visibility .3s ease;
+        }
+        &:hover,
+        &.sidebar-collapse {
+            @extend .bg-bgdarkmode;
+            .icon,
+            .text {
+                @extend .text-darkmode;
+            }
         }
     }
 }
 
 @media (min-width: 992px) {
-    .wrapper {
+    .dashboard {
         .sideMenu {
-            transform: translateX(0);
+            margin-left: 0;
+            box-shadow: 0 14px 28px rgba(0,0,0,.25),0 10px 10px rgba(0,0,0,.22) !important;
         }
-        .content {
-            margin-left: rem(200px);
+        .navbar-expand-lg .sideMenuToggler {
+            display: block;
         }
-        &.active {
+        &.sidebar-collapse {
             .sideMenu {
-                width: rem(80px);
-                .nav-link {
-                    text-align: center;
-                    .icon {
-                        margin-right: 0;
+                margin-left: 0;
+                box-shadow: 0 14px 28px rgba(0,0,0,.25),0 10px 10px rgba(0,0,0,.22) !important;
+                width: rem(73.6px);
+                .navbar {
+                    .logo-1 {
+                        opacity: 0;
+                        visibility: hidden;
+                        width: 0;
                     }
-                    .text {
-                        display: none;
+                    .logo-2 {
+                        opacity: 100%;
+                        visibility: visible;
+                        width: 100%;
+                    }
+                }
+                .nav-sidebar{
+                    .nav-link {
+                        text-align: center;
+                        .icon {
+                            margin-left: 0;
+                        }
+                        .text {
+                            //display: none;
+                            margin-left: rem(-10px);
+                            opacity: 0;
+                            visibility: hidden;
+                            width: 0;
+                        }
                     }
                 }
             }
             .content {
-                margin-left: rem(80px);
+                margin-left: rem(73.6px);
+            }
+            nav {
+                margin-left: rem(73.6px);
             }
         }
     }
+    .wrapper {
+        .content {
+            margin-left: rem(250px);
+        }
+        nav {
+            margin-left: rem(250px);
+        }
+    }
+}
+
+.sidebar-overlay{
+    background-color: rgba(0,0,0,.1);
+    display: none;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: fixed;
+    z-index: 1037;
 }

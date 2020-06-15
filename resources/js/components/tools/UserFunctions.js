@@ -1,8 +1,9 @@
 import axios from 'axios'
+import getBaseURL from './GetBaseURL'
 
 export const register = newUser => {
     return axios
-        .post('api/auth/signup', newUser, {
+        .post(getBaseURL()+'api/auth/signup', newUser, {
           headers: { 'Content-Type': 'application/json', 'X-Requested-With': 'XMLHttpRequest' }
         })
         .then(response => {
@@ -16,7 +17,7 @@ export const register = newUser => {
 export const login = user => {
     return axios
         .post(
-            'api/auth/login',
+            getBaseURL()+'api/auth/login',
             {
                 email: user.email,
                 password: user.password
@@ -35,10 +36,21 @@ export const login = user => {
         })
 }
 
+export const isLogin = () => {
+    if (getToken()) {
+        return true;
+    }
+    return false;
+}
+
+export const getToken = () => {
+    return localStorage.getItem('usertoken');
+}
+
 export const getProfile = () => {
     return axios
-        .get('api/auth/user', {
-            headers: { Authorization: `Bearer ${localStorage.usertoken}` }
+        .get(getBaseURL()+'api/auth/user', {
+            headers: { Authorization: `Bearer ${getToken()}` }
         })
         .then(response => {
             console.log(response)

@@ -11,9 +11,16 @@
 |
 */
 //
+
+
 Route::get('{path?}', function () {
     return view('welcome');
 });
+
+Route::get('dashboard/{path?}', function () {
+    return view('dashboard');
+});
+
 Auth::routes(['verify' => true]);
 
 

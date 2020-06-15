@@ -5,14 +5,25 @@ class WorkerPage extends Component {
     constructor() {
         super()
         this.state = {
-            allpost: []
+            allpost: [],
         }
+    }
+
+    getTwoData(data) {
+        const items = []
+        if (data.length >= 10) {
+            for(var i = 0; i < 10; i++) {
+                items[i] = data[i]
+            }
+            return items
+        }
+        return data
     }
 
     componentDidMount() {
         getAllPost().then(res => {
             this.setState({
-                allpost: res
+                allpost: this.getTwoData(res.data),
             })
         })
     }
@@ -20,9 +31,9 @@ class WorkerPage extends Component {
     render() {
         let allpost = this.state.allpost.map((post) => {
             return(
-                <div className="card" style="width: 18rem;">
+                <div className="card" key={post.id}>
                     <img className="card-img-top" src="..." alt="Card image cap"/>
-                    <div className="card-body" key={post.id}>
+                    <div className="card-body">
                         <h5 className="card-title">{post.header_post}</h5>
                         <p className="card-text">{post.isi_post}</p>
                         <a href="#" className="btn btn-primary">Detail</a>
