@@ -89,14 +89,33 @@ hr.small {
     }
 }
 
+.user {
+    .user-menu {
+        .user-image {
+            float: none;
+            line-height: 10px;
+            margin-right: .4rem;
+            margin-top: -8px;
+            border-radius: 50%;
+            display: inline-block;
+            width: 2.1rem;
+            height: 2.1rem;
+            vertical-align: text-top;
+        }
+        .nav-link {
+            padding: 0;
+        }
+    }
+}
+
 @media (min-width: 992px) {
-    section {
+    .section {
         padding: 90px 0;
     }
 }
 
 @media (min-width: 768px) {
-    section {
+    .section {
         padding: 70px 0;
         .col-md-4 {
             flex: 0 0 29.1666666666% !important;
@@ -109,7 +128,7 @@ hr.small {
     }
 }
 
-section {
+.section {
     display: flex !important;
     align-items: center;
     min-height: 100vh !important;
@@ -228,6 +247,7 @@ footer {
     text-align: center;
     -webkit-border-radius: 0 0 10px 10px;
     border-radius: 0 0 10px 10px;
+    margin: auto -2rem -2rem;
 }
 /* ANIMATIONS */
 

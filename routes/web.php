@@ -13,13 +13,20 @@
 //
 
 
-Route::get('{path?}', function () {
-    return view('welcome');
-});
+// Website route
+Route::get('/{path?}', function () {
+    return view('website');
+})->where('path', '[^user, ^admin]*');
 
-Route::get('dashboard/{path?}', function () {
-    return view('dashboard');
-});
+// User route
+Route::get('/user/{path?}', function () {
+    return view('user');
+})->where('path', '.*');
+
+// Admin route
+Route::get('/admin/{path?}', function () {
+    return view('admin');
+})->where('path', '.*');
 
 Auth::routes(['verify' => true]);
 

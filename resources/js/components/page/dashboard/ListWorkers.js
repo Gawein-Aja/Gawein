@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {getAllPost} from "../../tools/PostFunction";
+import {getAllPost} from "../../../user/components/functions/PostFunction";
 import WorkerCard from "../../tools/WorkerCard";
 
 class ListWorkers extends Component {

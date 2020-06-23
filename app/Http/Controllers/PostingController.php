@@ -9,7 +9,16 @@ class PostingController extends Controller
     public function index()
     {
         $postings = auth()->user()->postings;
- 
+
+        return response()->json([
+            'success' => true,
+            'data' => $postings
+        ]);
+    }
+    public function showAll()
+    {
+        $postings = Posting::with('user')->orderBy('id', 'DESC')->get();
+
         return response()->json([
             'success' => true,
             'data' => $postings
@@ -18,18 +27,18 @@ class PostingController extends Controller
     public function show($id)
     {
         $posting = auth()->user()->postings()->find($id);
- 
+
         if (!$posting) {
             return response()->json([
                 'success' => false,
                 'message' => 'Posting with id ' . $id . ' not found'
             ], 400);
         }
- 
+
         return response()->json([
             'success' => true,
             'data' => $posting->toArray()
-        ], 400);
+        ]);
     }
     public function store(Request $request)
     {
@@ -37,11 +46,11 @@ class PostingController extends Controller
             'header_post' => 'required|string',
             'isi_post' => 'required|string'
         ]);
- 
+
         $posting = new Posting();
         $posting->header_post = $request->header_post;
         $posting->isi_post = $request->isi_post;
- 	
+
 	if ($request->hasfile('image'))
 	{
 		$file = $request->file('image');
@@ -49,9 +58,9 @@ class PostingController extends Controller
 		//$extension = $file->getClientOriginalExtension();
 		$filename = time().".".$extension;
 		$file->move('uploads/posting/',$filename);
-		$posting->image = $filename;	
+		$posting->image = $filename;
 	} else {
-		$posting->image = '';	
+		$posting->image = '';
 	}
         if (auth()->user()->postings()->save($posting))
             return response()->json([
@@ -67,7 +76,7 @@ class PostingController extends Controller
     public function update(Request $request, $id)
     {
         $posting = auth()->user()->postings()->find($id);
- 	$this->validate($request, [
+ 	    $this->validate($request, [
             'header_post' => 'required|string',
             'isi_post' => 'required|string'
         ]);
@@ -84,18 +93,18 @@ class PostingController extends Controller
 		$file = $request->file('image');
 		$extension = 'jpg';
 		$filename = time().".".$extension;
-		$file->move('uploads/posting/',$filename);	
-	} 
+		$file->move('uploads/posting/',$filename);
+	}
 	else
 	{
 		$filename = $posting->image;
 	}
         $updated = Posting::where('id',$id)->update(['header_post'=>$header_post,'isi_post'=>$isi_post,'image'=>$filename]);
- 	
+
         if ($updated)
             return response()->json([
                 'success' => true,
-		'data' => $posting->toArray()
+		        'data' => $posting->toArray()
             ]);
         else
             return response()->json([
@@ -106,14 +115,14 @@ class PostingController extends Controller
     public function destroy($id)
     {
         $posting = auth()->user()->postings()->find($id);
- 
+
         if (!$posting) {
             return response()->json([
                 'success' => false,
                 'message' => 'Posting with id ' . $id . ' not found'
             ], 400);
         }
- 
+
         if ($posting->delete()) {
             return response()->json([
                 'success' => true

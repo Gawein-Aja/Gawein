@@ -20,7 +20,6 @@ $colors: (
     font-family: 'Montserrat', sans-serif;
 }
 body {
-    height: 1000px;
     @extend .bg-bgdarkmode;
     @extend .text-darkmode;
 }

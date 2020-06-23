@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import Nav2 from "./Nav2";
-import { login } from '../tools/UserFunctions'
+import { login } from '../../user/components/functions/UserFunctions'
 
 class Loginpage extends Component {
     constructor() {

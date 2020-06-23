@@ -23,10 +23,10 @@ class AuthController extends Controller
     {
         $request->validate([
             'name' => 'required|string',
-	    'jurusan' => 'required|string',
+	        'jurusan' => 'required|string',
             'email' => 'required|string|email|unique:users',
             'password' => 'required|string|confirmed'
-        ]);        
+        ]);
         $user = new User([
             'name' => $request->name,
             'email' => $request->email,
@@ -34,18 +34,18 @@ class AuthController extends Controller
 	    'activation_token' => str_random(60),
             'nowa' => $request->nowa,
             'jurusan' => $request->jurusan,
-        ]);        
+        ]);
 
-        $user->save();        
+        $user->save();
 	$avatar = Avatar::create($user->name)->getImageObject()->encode('png');
-        Storage::put('avatars/'.$user->id.'/avatar.png', (string) $avatar);        
+        Storage::put('avatars/'.$user->id.'/avatar.png', (string) $avatar);
         $user->notify(new SignupActivate($user));
 
         return response()->json([
             'message' => 'Successfully created user!'
         ], 201);
     }
-  
+
     /**
      * Login user and create token
      *
@@ -62,16 +62,22 @@ class AuthController extends Controller
             'email' => 'required|string|email',
             'password' => 'required|string',
             'remember_me' => 'boolean'
-        ]);        
-        $credentials = request(['email', 'password']);        
+        ]);
+        $credentials = request(['email', 'password']);
         $credentials['active'] = 1;
         $credentials['deleted_at'] = null;
         if(!Auth::attempt($credentials))
             return response()->json([
                 'message' => 'Unauthorized'
-            ], 401);        $user = $request->user();        $tokenResult = $user->createToken('Personal Access Token');
-        $token = $tokenResult->token;        if ($request->remember_me)
-            $token->expires_at = Carbon::now()->addWeeks(1);        $token->save();        return response()->json([
+            ], 401);
+        $user = $request->user();
+        $tokenResult = $user->createToken('Personal Access Token');
+        $token = $tokenResult->token;
+        if ($request->remember_me)
+            $token->expires_at = Carbon::now()->addWeeks(1);
+        $token->save();
+        return response()->json([
+            'user' => $user->toArray(),
             'access_token' => $tokenResult->accessToken,
             'token_type' => 'Bearer',
             'expires_at' => Carbon::parse(
@@ -79,7 +85,7 @@ class AuthController extends Controller
             )->toDateTimeString()
         ]);
     }
-  
+
     /**
      * Logout user (Revoke the token)
      *
@@ -87,11 +93,12 @@ class AuthController extends Controller
      */
     public function logout(Request $request)
     {
-        $request->user()->token()->revoke();        return response()->json([
+        $request->user()->token()->revoke();
+        return response()->json([
             'message' => 'Successfully logged out'
         ]);
     }
-  
+
     /**
      * Get the authenticated User
      *
@@ -105,15 +112,13 @@ class AuthController extends Controller
 
     public function signupActivate($token)
     {
-	    $user = User::where('activation_token', $token)->first();    if (!$user) {
-		return response()->json([
-		    'message' => 'This activation token is invalid.'
-		], 404);
+	    $user = User::where('activation_token', $token)->first();
+	    if (!$user) {
+            return response()->json([
+                'message' => 'This activation token is invalid.'
+            ], 404);
 	    }    $user->active = true;
 	    $user->activation_token = '';
 	    $user->save();    return redirect('login');;
     }
-
-
-
 }

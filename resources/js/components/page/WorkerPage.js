@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {getAllPost} from "../tools/PostFunction";
+import {getAllPost} from "../../user/components/functions/PostFunction";
 
 class WorkerPage extends Component {
     constructor() {
