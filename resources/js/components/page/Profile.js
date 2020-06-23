@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { getProfile } from './UserFunctions'
+import { getProfile } from '../../user/components/functions/UserFunctions'
 
 class Profile extends Component {
     constructor() {

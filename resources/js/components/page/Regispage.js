@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { register } from './UserFunctions'
+import { register } from '../../user/components/functions/UserFunctions'
 import Nav2 from "./Nav2";
 
 class Registerpage extends Component {
@@ -41,54 +41,56 @@ class Registerpage extends Component {
             <div>
                 <Nav2 />
                 <div className="wrapper fadeInDown">
-                    <div className="formContent">
-                        <div className="fadeIn first">
-                            <h1 className="icon">Register</h1>
-                        </div>
+                    <div className="form-layout">
+                        <div className="formContent">
+                            <div className="fadeIn first">
+                                <h1 className="icon">Register</h1>
+                            </div>
 
-                        <form noValidate onSubmit={this.onSubmit} className="form-group">
-                            <input
-                                type="text"
-                                className="form-control fadeIn second"
-                                name="first_name"
-                                placeholder="Nama Depan"
-                                value={this.state.first_name}
-                                onChange={this.onChange}
-                            />
-                            <input
-                                type="text"
-                                className="form-control fadeIn second"
-                                name="last_name"
-                                placeholder="Nama Belakang"
-                                value={this.state.last_name}
-                                onChange={this.onChange}
-                            />
-                            <input
-                                type="email"
-                                className="form-control fadeIn third"
-                                name="email"
-                                placeholder="Email"
-                                value={this.state.email}
-                                onChange={this.onChange}
-                            />
-                            <input
-                                type="password"
-                                className="form-control fadeIn second"
-                                name="password"
-                                placeholder="Password"
-                                value={this.state.password}
-                                onChange={this.onChange}
-                            />
-                            <input
-                                type="password"
-                                className="form-control fadeIn third"
-                                name="password_confirmation"
-                                placeholder="Konfirmasi Password"
-                                value={this.state.password_confirmation}
-                                onChange={this.onChange}
-                            />
-                            <button type="submit" className="btn btn-primary fadeIn fourth" value="Submit">Register Now</button>
-                        </form>
+                            <form noValidate onSubmit={this.onSubmit} className="form-group">
+                                <input
+                                    type="text"
+                                    className="form-control fadeIn second"
+                                    name="first_name"
+                                    placeholder="Nama Depan"
+                                    value={this.state.first_name}
+                                    onChange={this.onChange}
+                                />
+                                <input
+                                    type="text"
+                                    className="form-control fadeIn second"
+                                    name="last_name"
+                                    placeholder="Nama Belakang"
+                                    value={this.state.last_name}
+                                    onChange={this.onChange}
+                                />
+                                <input
+                                    type="email"
+                                    className="form-control fadeIn third"
+                                    name="email"
+                                    placeholder="Email"
+                                    value={this.state.email}
+                                    onChange={this.onChange}
+                                />
+                                <input
+                                    type="password"
+                                    className="form-control fadeIn second"
+                                    name="password"
+                                    placeholder="Password"
+                                    value={this.state.password}
+                                    onChange={this.onChange}
+                                />
+                                <input
+                                    type="password"
+                                    className="form-control fadeIn third"
+                                    name="password_confirmation"
+                                    placeholder="Konfirmasi Password"
+                                    value={this.state.password_confirmation}
+                                    onChange={this.onChange}
+                                />
+                                <button type="submit" className="btn btn-primary fadeIn fourth" value="Submit">Register Now</button>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
