@@ -96565,10 +96565,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router */ "./node_modules/react-router/esm/react-router.js");
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 /* harmony import */ var _functions_PostFunction__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../functions/PostFunction */ "./resources/js/user/components/functions/PostFunction.js");
-/* harmony import */ var _partials_Modal__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../partials/Modal */ "./resources/js/user/components/partials/Modal.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -96578,14 +96575,13 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
 
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
 function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
 
 
 
@@ -96602,14 +96598,8 @@ var MyPost = /*#__PURE__*/function (_Component) {
 
     _this = _possibleConstructorReturn(this, _getPrototypeOf(MyPost).call(this, props));
     _this.state = {
-      allpost: [],
-      method: "",
-      id: 0,
-      header_post: "",
-      isi_post: ""
+      allpost: []
     };
-    _this.onChange = _this.onChange.bind(_assertThisInitialized(_this));
-    _this.onSubmit = _this.onSubmit.bind(_assertThisInitialized(_this));
     return _this;
   }
 
@@ -96627,69 +96617,15 @@ var MyPost = /*#__PURE__*/function (_Component) {
       });
     }
   }, {
-    key: "updatePost",
-    value: function updatePost() {
+    key: "deletePost",
+    value: function deletePost(id) {
       var _this3 = this;
 
-      _functions_PostFunction__WEBPACK_IMPORTED_MODULE_3__["Post"].update(this.state.id, {
-        header_post: this.state.header_post,
-        isi_post: this.state.isi_post
-      }, function (response) {
+      _functions_PostFunction__WEBPACK_IMPORTED_MODULE_3__["Post"]["delete"](id, function (response) {
         _this3.loadPost();
       }, function (err) {
         console.log(err);
       });
-    }
-  }, {
-    key: "deletePost",
-    value: function deletePost(id) {
-      var _this4 = this;
-
-      _functions_PostFunction__WEBPACK_IMPORTED_MODULE_3__["Post"]["delete"](id, function (response) {
-        _this4.loadPost();
-      }, function (err) {
-        console.log(err);
-      });
-    }
-  }, {
-    key: "addPost",
-    value: function addPost() {
-      var _this5 = this;
-
-      _functions_PostFunction__WEBPACK_IMPORTED_MODULE_3__["Post"].add({
-        header_post: this.state.header_post,
-        isi_post: this.state.isi_post
-      }, function (response) {
-        _this5.loadPost();
-      }, function (err) {
-        console.log(err);
-      });
-    }
-  }, {
-    key: "newPost",
-    value: function newPost(method, id, header_post, isi_post) {
-      this.setState({
-        method: method,
-        id: id,
-        header_post: header_post,
-        isi_post: isi_post
-      });
-    }
-  }, {
-    key: "onChange",
-    value: function onChange(e) {
-      this.setState(_defineProperty({}, e.target.name, e.target.value));
-    }
-  }, {
-    key: "onSubmit",
-    value: function onSubmit(e) {
-      e.preventDefault();
-
-      if (this.state.method == "Add") {
-        this.addPost();
-      } else {
-        this.updatePost();
-      }
     }
   }, {
     key: "componentDidMount",
@@ -96699,7 +96635,7 @@ var MyPost = /*#__PURE__*/function (_Component) {
   }, {
     key: "render",
     value: function render() {
-      var _this6 = this;
+      var _this4 = this;
 
       var count = 1;
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -96802,44 +96738,11 @@ var MyPost = /*#__PURE__*/function (_Component) {
           style: {
             width: "5%"
           },
-          onClick: _this6.deletePost.bind(_this6, post.id)
+          onClick: _this4.deletePost.bind(_this4, post.id)
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
           className: "nav-icon fa fa-trash-alt"
         })))));
-      }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_partials_Modal__WEBPACK_IMPORTED_MODULE_4__["default"], {
-        title: this.state.method + " Post"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
-        noValidate: true,
-        onSubmit: this.onSubmit
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "form-group"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Judul Post"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        type: "text",
-        className: "form-control",
-        name: "header_post",
-        value: this.state.header_post,
-        onChange: this.onChange
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "form-group"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", null, "Isi Post"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
-        type: "text",
-        className: "form-control",
-        name: "isi_post",
-        value: this.state.isi_post,
-        onChange: this.onChange
-      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "d-flex mt-2"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        type: "button",
-        className: "btn btn-secondary ml-auto mr-3",
-        "data-dismiss": "modal"
-      }, "Cancel"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        type: "submit",
-        className: "btn btn-primary",
-        value: "Submit",
-        "data-toggle": "modal",
-        "data-target": "#modalupdate"
-      }, this.state.method))))))));
+      })))))));
     }
   }]);
 
@@ -97017,103 +96920,6 @@ var Header = /*#__PURE__*/function (_React$Component) {
 }(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
 
 /* harmony default export */ __webpack_exports__["default"] = (Object(react_router__WEBPACK_IMPORTED_MODULE_1__["withRouter"])(Header));
-
-/***/ }),
-
-/***/ "./resources/js/user/components/partials/Modal.js":
-/*!********************************************************!*\
-  !*** ./resources/js/user/components/partials/Modal.js ***!
-  \********************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _functions_PostFunction__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../functions/PostFunction */ "./resources/js/user/components/functions/PostFunction.js");
-/* harmony import */ var react_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-router */ "./node_modules/react-router/esm/react-router.js");
-function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
-
-function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
-
-function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
-
-function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
-
-
-
-
-
-
-var Modal = /*#__PURE__*/function (_Component) {
-  _inherits(Modal, _Component);
-
-  function Modal(props) {
-    _classCallCheck(this, Modal);
-
-    return _possibleConstructorReturn(this, _getPrototypeOf(Modal).call(this, props));
-  }
-
-  _createClass(Modal, [{
-    key: "render",
-    value: function render() {
-      var _this$props = this.props,
-          title = _this$props.title,
-          children = _this$props.children;
-      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "modal fade",
-        id: "modalupdate",
-        tabIndex: "-1",
-        role: "dialog",
-        "aria-labelledby": "exampleModalLabel",
-        style: {
-          display: 'none'
-        },
-        "aria-hidden": "true"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "modal-dialog",
-        role: "document"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "modal-content"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "modal-header"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h5", {
-        className: "modal-title",
-        id: "exampleModalLabel"
-      }, title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-        type: "button",
-        className: "close",
-        "data-dismiss": "modal",
-        "aria-label": "Close"
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-        "aria-hidden": "true"
-      }, "\xD7"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "modal-body"
-      }, children)))));
-    }
-  }]);
-
-  return Modal;
-}(react__WEBPACK_IMPORTED_MODULE_0__["Component"]);
-
-Modal.propTypes = {
-  title: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string.isRequired,
-  children: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.node.isRequired
-};
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_router__WEBPACK_IMPORTED_MODULE_3__["withRouter"])(Modal));
 
 /***/ }),
 
