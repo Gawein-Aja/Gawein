@@ -1,5 +1,5 @@
-const mix = require('laravel-mix');
-require('dotenv').config();
+const mix = require("laravel-mix");
+require("dotenv").config();
 
 /*
  |--------------------------------------------------------------------------
@@ -12,7 +12,8 @@ require('dotenv').config();
  |
  */
 
-mix.react('resources/js/admin.js', 'public/js')
-   .react('resources/js/website.js', 'public/js')
-   .react('resources/js/user.js', 'public/js')
-   .sass('resources/sass/app.scss', 'public/css');
+mix.react("resources/js/admin.js", "public/js")
+    .react("resources/js/website.js", "public/js")
+    .react("resources/js/user.js", "public/js")
+    .sass("resources/sass/app.scss", "public/css")
+    .sass("resources/sass/AdminLTE.scss", "public/css");

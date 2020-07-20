@@ -76,7 +76,7 @@ class PostingController extends Controller
     public function update(Request $request, $id)
     {
         $posting = auth()->user()->postings()->find($id);
- 	    $this->validate($request, [
+        $this->validate($request, [
             'header_post' => 'required|string',
             'isi_post' => 'required|string'
         ]);

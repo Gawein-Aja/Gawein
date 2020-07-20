@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from "react";
 import Section from "../partials/Section";
 
 class Landing extends Component {
@@ -11,9 +11,11 @@ class Landing extends Component {
                             <div className="col-lg-8 col-md-10">
                                 <div className="site-heading">
                                     <h1>Gawein Aja</h1>
-                                    <hr className="small"/>
-                                    <span className="subheading">Situs marketplace freelance, jasa dan produk digital
-                                        yang mempertemukan pihak pencari jasa dengan para freelancer.
+                                    <hr className="small" />
+                                    <span className="subheading">
+                                        Situs marketplace freelance, jasa dan
+                                        produk digital yang mempertemukan pihak
+                                        pencari jasa dengan para freelancer.
                                     </span>
                                 </div>
                             </div>
@@ -22,16 +24,23 @@ class Landing extends Component {
                 </header>
                 <Section id="What">
                     <div className="col-md-4 p-4">
-                        <img src="https://drive.google.com/uc?id=1tS5F83No-pNAWEZMurWVyc0RT7NdfdxY"
-                             className="img-fluid" alt=""/>
+                        <img
+                            src="https://drive.google.com/uc?id=1tS5F83No-pNAWEZMurWVyc0RT7NdfdxY"
+                            className="img-fluid"
+                            alt=""
+                        />
                     </div>
                     <div className="col-md-7 offset-md-1">
                         <h1>Apa itu Website Gawein?</h1>
-                        <p className="lead text-justify">GaweIn adalah situs marketplace freelance, jasa dan produk
-                            digital yang mempertemukan pihak pencari jasa dengan para freelancer. Didirikan pada
-                            Februari 2020, GaweIn menyediakan tempat untuk para pencari kerja dan pebisnis yang
-                            membutuhkan jasa dari setiap jurusan dan berbagai bidang kategori pekerjaan.  Selain
-                            mendapatkan proyek dan menawarkan jasa, pengguna situs juga dapat melakukan transaksi
+                        <p className="lead text-justify">
+                            GaweIn adalah situs marketplace freelance, jasa dan
+                            produk digital yang mempertemukan pihak pencari jasa
+                            dengan para freelancer. Didirikan pada Februari
+                            2020, GaweIn menyediakan tempat untuk para pencari
+                            kerja dan pebisnis yang membutuhkan jasa dari setiap
+                            jurusan dan berbagai bidang kategori pekerjaan.
+                            Selain mendapatkan proyek dan menawarkan jasa,
+                            pengguna situs juga dapat melakukan transaksi
                             jual-beli produk digital.
                         </p>
                     </div>
@@ -40,29 +49,35 @@ class Landing extends Component {
                     <div className="col-md-4 card-detail">
                         <h1>AMAN</h1>
                         <p className="lead text-justify">
-                            Jaminan User terverifikasi merupakan civitas akademika POLBAN.
+                            Jaminan User terverifikasi merupakan civitas
+                            akademika POLBAN.
                         </p>
                         <p className="lead text-justify">
-                            Memiliki tim bantuan untuk menyelesaikan permasalahan project yang terjadi.
+                            Memiliki tim bantuan untuk menyelesaikan
+                            permasalahan project yang terjadi.
                         </p>
                     </div>
                     <div className="col-md-4 card-detail">
                         <h1>JELAS</h1>
                         <p className="lead text-justify">
-                            Semua detail pekerjaan, deskripsi, deadline sudah disepakati sejak awal.
+                            Semua detail pekerjaan, deskripsi, deadline sudah
+                            disepakati sejak awal.
                         </p>
                         <p className="lead text-justify">
-                            Sistem penilaian yang transparan, memudahkan semua pihak dalam menentukan pilihan dan
-                            terhindar dari penipuan.
+                            Sistem penilaian yang transparan, memudahkan semua
+                            pihak dalam menentukan pilihan dan terhindar dari
+                            penipuan.
                         </p>
                     </div>
                     <div className="col-md-4 card-detail">
                         <h1>AKURAT</h1>
                         <p className="lead text-justify">
-                            Owner bisa mencari tenaga ahli di bidangnya dengan cepat & benar karena adanya kategori.
+                            Owner bisa mencari tenaga ahli di bidangnya dengan
+                            cepat & benar karena adanya kategori.
                         </p>
                         <p className="lead text-justify">
-                            Worker bisa mendapatkan pekerjaan yang sesuai dengan bidangnya.
+                            Worker bisa mendapatkan pekerjaan yang sesuai dengan
+                            bidangnya.
                         </p>
                         <p className="lead text-justify">
                             Owner hanya membayar biaya yang sudah disepakati
@@ -71,10 +86,13 @@ class Landing extends Component {
                 </Section>
                 <Section title="Bagaimana Cara Kerja?" id="Procedure">
                     <div className="col-md-6 card-detail">
-                        <h1> <i className="fas fa-briefcase mr-1"></i>OWNER</h1>
+                        <h1>
+                            {" "}
+                            <i className="fas fa-briefcase mr-1"></i>OWNER
+                        </h1>
                         <p className="lead text-justify">
-                            Melakukan publish project dengan spesifikasi yang jelas (Judul, deskripsi, kategori dan
-                            deadline).
+                            Melakukan publish project dengan spesifikasi yang
+                            jelas (Judul, deskripsi, kategori dan deadline).
                         </p>
                         <p className="lead text-justify">
                             Melakukan pemilihan Worker / freelancer.
@@ -87,7 +105,9 @@ class Landing extends Component {
                         </p>
                     </div>
                     <div className="col-md-6 card-detail">
-                        <h1><i className="fas fa-handshake mr-1"></i>WORKER</h1>
+                        <h1>
+                            <i className="fas fa-handshake mr-1"></i>WORKER
+                        </h1>
                         <p className="lead text-justify">
                             Melakukan pencarian project.
                         </p>

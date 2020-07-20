@@ -1,0 +1,358 @@
+html {
+    scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Google Sans", sans-serif;
+}
+
+hr.small {
+    max-width: 100px;
+    margin: 15px auto;
+    border-width: 4px;
+    border-color: white;
+}
+
+.intro-header {
+    background: url("https://wallpaperplay.com/walls/full/3/c/4/164624.jpg")
+        no-repeat center center fixed !important;
+    position: relative;
+    width: 100%;
+    display: flex !important;
+    align-items: center;
+    min-height: 100vh !important;
+    padding: 60px 0;
+    .site-heading {
+        color: white;
+        text-align: center;
+        h1 {
+            margin-top: 0;
+            font-size: 50px;
+        }
+        .subheading {
+            font-size: 24px;
+            line-height: 1.1;
+            display: block;
+            font-weight: 300;
+            margin: 10px 0 0;
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .intro-header .site-heading h1 {
+        font-size: 80px;
+    }
+}
+
+.user {
+    .user-menu {
+        .user-image {
+            float: none;
+            line-height: 10px;
+            margin-right: 0.4rem;
+            margin-top: -8px;
+            border-radius: 50%;
+            display: inline-block;
+            width: 2.1rem;
+            height: 2.1rem;
+            vertical-align: text-top;
+        }
+        .nav-link {
+            padding: 0;
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .section {
+        padding: 90px 0;
+    }
+}
+
+@media (min-width: 768px) {
+    .section {
+        padding: 70px 0;
+        .col-md-4 {
+            flex: 0 0 29.1666666666% !important;
+            max-width: 29.1666666666% !important;
+        }
+        .col-md-6 {
+            flex: 0 0 45.8333333333% !important;
+            max-width: 45.8333333333% !important;
+        }
+    }
+}
+
+.section {
+    display: flex !important;
+    align-items: center;
+    min-height: 100vh !important;
+    padding: 60px 0;
+    .row {
+        padding: 2rem 15px 0;
+    }
+    h1 {
+        margin-bottom: 1rem;
+    }
+}
+
+.card-detail {
+    min-width: 0;
+    min-height: 100% !important;
+    background-color: #fff;
+    word-wrap: break-word;
+    border: 1px solid rgb(52, 58, 64);
+    border-radius: 6px;
+    margin: 15px auto 0;
+    padding: 1.25rem !important;
+    box-shadow: 1px 2px 3px 0 rgba(0, 0, 0, 0.1);
+    h1 {
+        margin-bottom: 1rem;
+    }
+}
+
+/*====================
+	Footer
+====================== */
+
+/* Main Footer */
+
+footer {
+    color: #fff;
+    p {
+        font-size: 0.8rem !important;
+        margin-bottom: 0.4rem !important;
+    }
+}
+
+.footer-body {
+    padding: 20px 0 !important;
+    .form-control {
+        margin-bottom: 1rem !important;
+        border: none !important;
+        border-radius: 5px !important;
+    }
+}
+
+/* Copy Right Footer */
+.footer-copyright {
+    //border-top: 1px solid #839FAD;
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.17);
+    padding: 10px 0 !important;
+    p {
+        margin: 0 auto !important;
+    }
+}
+
+/*====================
+	Widgets
+====================== */
+.widget-title {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    span {
+        background: #839fad none repeat scroll 0 0;
+        display: block;
+        height: 1px;
+        margin-top: 25px;
+        position: relative;
+        width: 20%;
+    }
+    span::after {
+        background: inherit;
+        content: "";
+        height: inherit;
+        position: absolute;
+        top: -4px;
+        width: 50%;
+    }
+}
+//Loginpage
+
+.wrapper {
+    .form-layout {
+        display: flex !important;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        min-height: 100vh !important;
+        padding: 60px 0;
+    }
+}
+
+.formContent {
+    -webkit-border-radius: 10px 10px 10px 10px;
+    border-radius: 10px 10px 10px 10px;
+    background: #fff;
+    padding: 2rem !important;
+    width: 90%;
+    max-width: 450px;
+    position: relative;
+    -webkit-box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    .form-group {
+        padding: 0 2rem;
+    }
+    .form-control {
+        height: calc(1.6em + 0.75rem + 5px) !important;
+        margin-bottom: 1rem !important;
+        border-radius: 5px !important;
+        box-shadow: 1px 2px 3px 0 rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+    .btn {
+        width: 100%;
+        box-shadow: 1px 2px 3px 0 rgba(0, 0, 0, 0.1);
+    }
+}
+
+.formFooter {
+    background-color: #f6f6f6;
+    border-top: 1px solid #dce8f1;
+    padding: 25px;
+    text-align: center;
+    -webkit-border-radius: 0 0 10px 10px;
+    border-radius: 0 0 10px 10px;
+    margin: auto -2rem -2rem;
+}
+/* ANIMATIONS */
+
+.fadeInDown {
+    -webkit-animation-name: fadeInDown;
+    animation-name: fadeInDown;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+@-webkit-keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+/* Simple CSS3 Fade-in Animation */
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@-moz-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fadeIn {
+    opacity: 0;
+    -webkit-animation: fadeIn ease-in 1;
+    -moz-animation: fadeIn ease-in 1;
+    animation: fadeIn ease-in 1;
+
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    animation-duration: 1s;
+}
+
+.fadeIn.first {
+    -webkit-animation-delay: 0.4s;
+    -moz-animation-delay: 0.4s;
+    animation-delay: 0.4s;
+}
+
+.fadeIn.second {
+    -webkit-animation-delay: 0.6s;
+    -moz-animation-delay: 0.6s;
+    animation-delay: 0.6s;
+}
+
+.fadeIn.third {
+    -webkit-animation-delay: 0.8s;
+    -moz-animation-delay: 0.8s;
+    animation-delay: 0.8s;
+}
+
+.fadeIn.fourth {
+    -webkit-animation-delay: 1s;
+    -moz-animation-delay: 1s;
+    animation-delay: 1s;
+}
+
+/* Simple CSS3 Fade-in Animation */
+.underlineHover:after {
+    display: block;
+    left: 0;
+    bottom: -10px;
+    width: 0;
+    height: 2px;
+    background-color: $link-color;
+    content: "";
+    transition: width 0.2s;
+}
+
+.underlineHover:hover {
+    color: #0d0d0d;
+}
+
+.underlineHover:hover:after {
+    width: 100%;
+}
+
+/* OTHERS */
+
+*:focus {
+    outline: none;
+}
+
+.icon {
+    font-size: 1.8em;
+    text-align: center;
+}

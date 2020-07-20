@@ -1,22 +1,22 @@
-    import React, {Component} from 'react';
-import { Auth } from '../functions/UserFunctions'
+import React, { Component } from "react";
+import { Auth } from "../functions/UserFunctions";
 
 class Login extends Component {
     constructor() {
-        super()
+        super();
         this.state = {
-            email: '',
-            password: '',
+            email: "",
+            password: "",
             error_message: null,
             errors: null
-        }
+        };
 
-        this.onChange = this.onChange.bind(this)
-        this.onSubmit = this.onSubmit.bind(this)
+        this.onChange = this.onChange.bind(this);
+        this.onSubmit = this.onSubmit.bind(this);
     }
 
     onChange(e) {
-        this.setState({ [e.target.name]: e.target.value })
+        this.setState({ [e.target.name]: e.target.value });
     }
     onSubmit(e) {
         e.preventDefault();
@@ -26,7 +26,7 @@ class Login extends Component {
             errors: null
         });
 
-        if(this.state.email == "" || this.state.password == "") {
+        if (this.state.email == "" || this.state.password == "") {
             this.setState({
                 error_message: "Please enter login credentials"
             });
@@ -34,30 +34,34 @@ class Login extends Component {
             return false;
         }
 
-        Auth.login({email: this.state.email, password: this.state.password}, (response) => {
-            if (response) {
-                console.log(response);
-                for (var i in response) {
-                    console.log(response[i]);
-                    localStorage.setItem("user." + i, response[i]);
+        Auth.login(
+            { email: this.state.email, password: this.state.password },
+            response => {
+                if (response) {
+                    console.log(response);
+                    for (var i in response) {
+                        console.log(response[i]);
+                        localStorage.setItem("user." + i, response[i]);
 
-                    setTimeout(() => {
-                        this.props.history.push("/");
-                    }, 500);
+                        setTimeout(() => {
+                            this.props.history.push("/posts/");
+                        }, 500);
+                    }
+                } else {
+                    localStorage.clear();
+
+                    this.setState({
+                        error_message: "Unauthorized"
+                    });
                 }
-            } else {
-                localStorage.clear();
-
+            },
+            err => {
                 this.setState({
-                    error_message: "Unauthorized"
+                    error_message: err.response.data.message,
+                    errors: err.response.data.errors
                 });
             }
-        }, (err) => {
-            this.setState({
-                error_message: err.response.data.message,
-                errors: err.response.data.errors
-            });
-        });
+        );
     }
 
     render() {
@@ -69,11 +73,17 @@ class Login extends Component {
                             <h1 className="icon">Login</h1>
                         </div>
 
-                        {
-                            this.state.error_message?(<div className="alert alert-danger">{this.state.error_message}</div>):null
-                        }
+                        {this.state.error_message ? (
+                            <div className="alert alert-danger">
+                                {this.state.error_message}
+                            </div>
+                        ) : null}
 
-                        <form noValidate onSubmit={this.onSubmit} className="form-group">
+                        <form
+                            noValidate
+                            onSubmit={this.onSubmit}
+                            className="form-group"
+                        >
                             <input
                                 type="email"
                                 className="form-control fadeIn second"
@@ -82,9 +92,11 @@ class Login extends Component {
                                 value={this.state.email}
                                 onChange={this.onChange}
                             />
-                            {
-                                this.state.errors && this.state.errors.email?(<div className="help-block">{this.state.errors.email[0]}</div>):null
-                            }
+                            {this.state.errors && this.state.errors.email ? (
+                                <div className="help-block">
+                                    {this.state.errors.email[0]}
+                                </div>
+                            ) : null}
                             <input
                                 type="password"
                                 className="form-control fadeIn third"
@@ -93,16 +105,25 @@ class Login extends Component {
                                 value={this.state.password}
                                 onChange={this.onChange}
                             />
-                            {
-                                this.state.errors && this.state.errors.password?(<div className="help-block">{this.state.errors.password[0]}</div>):null
-                            }
-                            <button type="submit" className="btn btn-primary fadeIn fourth" value="Submit">Log In</button>
+                            {this.state.errors && this.state.errors.password ? (
+                                <div className="help-block">
+                                    {this.state.errors.password[0]}
+                                </div>
+                            ) : null}
+                            <button
+                                type="submit"
+                                className="btn btn-primary fadeIn fourth"
+                                value="Submit"
+                            >
+                                Log In
+                            </button>
                         </form>
 
                         <div className="formFooter">
-                            <p className="underlineHover">Back to <a href="/">Homepage</a>?</p>
+                            <p className="underlineHover">
+                                Back to <a href="/">Homepage</a>?
+                            </p>
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -110,4 +131,4 @@ class Login extends Component {
     }
 }
 
-export default Login
+export default Login;

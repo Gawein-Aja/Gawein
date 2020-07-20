@@ -21,12 +21,12 @@ Route::get('/{path?}', function () {
 // User route
 Route::get('/user/{path?}', function () {
     return view('user');
-})->where('path', '.*');
+})->where('path', '[^admin]*');
 
 // Admin route
 Route::get('/admin/{path?}', function () {
     return view('admin');
-})->where('path', '.*');
+})->where('path', '[^user]*');
 
 Auth::routes(['verify' => true]);
 

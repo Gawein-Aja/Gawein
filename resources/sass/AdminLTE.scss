@@ -1,0 +1,41 @@
+/*!
+ *   AdminLTE v3.0.5
+ *   Author: Colorlib
+ *   Website: AdminLTE.io <http://adminlte.io>
+ *   License: Open source - MIT <http://opensource.org/licenses/MIT>
+ */
+// Bootstrap
+// ---------------------------------------------------
+@import "~bootstrap/scss/functions";
+@import "adminlte/bootstrap-variables";
+@import "~bootstrap/scss/bootstrap";
+
+// Variables and Mixins
+// ---------------------------------------------------
+@import "adminlte/variables";
+@import "adminlte/mixins";
+
+@import "adminlte/parts/core";
+@import "adminlte/parts/components";
+@import "adminlte/parts/extra-components";
+@import "adminlte/parts/pages";
+@import "adminlte/parts/plugins";
+@import "adminlte/parts/miscellaneous";
+
+@import "~jquery-ui/themes/base/all.css";
+@import "~@fortawesome/fontawesome-free/scss/fontawesome";
+@import "~@fortawesome/fontawesome-free/scss/regular";
+@import "~@fortawesome/fontawesome-free/scss/solid";
+@import "~@fortawesome/fontawesome-free/scss/brands";
+
+// Quill
+.quill {
+    .ql-toolbar {
+        border-top-left-radius: 0.25rem !important;
+        border-top-right-radius: 0.25rem !important;
+    }
+    .ql-container {
+        border-bottom-left-radius: 0.25rem !important;
+        border-bottom-right-radius: 0.25rem !important;
+    }
+}
