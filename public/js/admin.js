@@ -70047,6 +70047,17 @@ window.axios.defaults.baseURL = "http://127.0.0.1:8000/" + 'api';
 
 /***/ }),
 
+/***/ "./resources/sass/AdminLTE.scss":
+/*!**************************************!*\
+  !*** ./resources/sass/AdminLTE.scss ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ "./resources/sass/app.scss":
 /*!*********************************!*\
   !*** ./resources/sass/app.scss ***!
@@ -70059,14 +70070,15 @@ window.axios.defaults.baseURL = "http://127.0.0.1:8000/" + 'api';
 /***/ }),
 
 /***/ 0:
-/*!***************************************************************!*\
-  !*** multi ./resources/js/admin.js ./resources/sass/app.scss ***!
-  \***************************************************************/
+/*!**********************************************************************************************!*\
+  !*** multi ./resources/js/admin.js ./resources/sass/app.scss ./resources/sass/AdminLTE.scss ***!
+  \**********************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /opt/lampp/htdocs/Gawein/resources/js/admin.js */"./resources/js/admin.js");
-module.exports = __webpack_require__(/*! /opt/lampp/htdocs/Gawein/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\xampp\htdocs\Gawein\resources\js\admin.js */"./resources/js/admin.js");
+__webpack_require__(/*! C:\xampp\htdocs\Gawein\resources\sass\app.scss */"./resources/sass/app.scss");
+module.exports = __webpack_require__(/*! C:\xampp\htdocs\Gawein\resources\sass\AdminLTE.scss */"./resources/sass/AdminLTE.scss");
 
 
 /***/ })

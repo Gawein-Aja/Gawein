@@ -72315,8 +72315,8 @@ var App = /*#__PURE__*/function (_Component) {
 
 /* harmony default export */ __webpack_exports__["default"] = (App);
 
-if (document.getElementById('app')) {
-  react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(App, null), document.getElementById('app'));
+if (document.getElementById("app")) {
+  react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(App, null), document.getElementById("app"));
 }
 
 /***/ }),
@@ -72463,7 +72463,7 @@ var Landing = /*#__PURE__*/function (_Component) {
         className: "col-md-7 offset-md-1"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Apa itu Website Gawein?"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
         className: "lead text-justify"
-      }, "GaweIn adalah situs marketplace freelance, jasa dan produk digital yang mempertemukan pihak pencari jasa dengan para freelancer. Didirikan pada Februari 2020, GaweIn menyediakan tempat untuk para pencari kerja dan pebisnis yang membutuhkan jasa dari setiap jurusan dan berbagai bidang kategori pekerjaan.  Selain mendapatkan proyek dan menawarkan jasa, pengguna situs juga dapat melakukan transaksi jual-beli produk digital."))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_partials_Section__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      }, "GaweIn adalah situs marketplace freelance, jasa dan produk digital yang mempertemukan pihak pencari jasa dengan para freelancer. Didirikan pada Februari 2020, GaweIn menyediakan tempat untuk para pencari kerja dan pebisnis yang membutuhkan jasa dari setiap jurusan dan berbagai bidang kategori pekerjaan. Selain mendapatkan proyek dan menawarkan jasa, pengguna situs juga dapat melakukan transaksi jual-beli produk digital."))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_partials_Section__WEBPACK_IMPORTED_MODULE_1__["default"], {
         id: "Why",
         title: "Mengapa Gawein Aja?"
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -73005,7 +73005,7 @@ Section.propTypes = {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /opt/lampp/htdocs/Gawein/resources/js/website.js */"./resources/js/website.js");
+module.exports = __webpack_require__(/*! C:\xampp\htdocs\Gawein\resources\js\website.js */"./resources/js/website.js");
 
 
 /***/ })
